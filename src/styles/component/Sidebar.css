@@ -17,7 +17,7 @@
 }
 
 /* 작은 화면에서는 사이드바 숨기기 */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .sidebar {
     transform: translateX(-100%); /* 기본적으로 숨김 */
   }
