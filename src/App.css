@@ -15,9 +15,9 @@ body {
 #root {
   /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 0.1rem;
   text-align: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 /* ========== 위는 기초 설정입니다. ========== */
