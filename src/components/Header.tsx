@@ -34,7 +34,7 @@ import {
 } from '@headlessui/react';
 import {
   ArrowPathIcon,
-  Bars3Icon,
+  // Bars3Icon,
   ChartPieIcon,
   CursorArrowRaysIcon,
   FingerPrintIcon,
@@ -86,22 +86,27 @@ export default function Header() {
 
   return (
     <header className='bg-white'>
+      {/* =================================================================================================================================== 
+        이 버튼은 lg 이하로 내려갔을 때, 좁혀지면서 'drawer navigator' Button을 나타나게 하는 것입니다.
+      =================================================================================================================================== */}
       <nav
         aria-label='Global'
-        className='mx-auto flex max-w-7xl items-center justify-between p-0 lg:px-10'
+        className='mx-auto flex max-w-7xl items-center justify-between p-0 lg:px-0'
       >
+        {/* =================================================================================================================================== 
+          이 버튼은 lg 이하로 내려갔을 때, 좁혀지면서 'drawer navigator' Button을 나타나게 하는 것입니다.
+        =================================================================================================================================== */}
         <div className='flex lg:flex-1'>
           <a href='#' className='-m-1.5 p-1.5'>
             <span className='sr-only'>Your Company</span>
-            <img
-              alt=''
-              src={urlogLogo}
-              // src='https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600'
-              className='h-20 w-auto'
-            />
+            <img alt='logo' src={urlogLogo} className='h-20 w-auto' />
           </a>
         </div>
-        <div className='flex lg:hidden'>
+
+        {/* =================================================================================================================================== 
+          이 버튼은 lg 이하로 내려갔을 때, 좁혀지면서 'drawer navigator' Button을 나타나게 하는 것입니다.
+        =================================================================================================================================== */}
+        {/* <div className='flex lg:hidden'>
           <button
             type='button'
             onClick={() => setMobileMenuOpen(true)}
@@ -110,7 +115,11 @@ export default function Header() {
             <span className='sr-only'>Open main menu</span>
             <Bars3Icon aria-hidden='true' className='size-6' />
           </button>
-        </div>
+        </div> */}
+
+        {/* =================================================================================================================================== 
+          lg 이상일 때, 상단에 웹사이트처럼 버튼이 나타나게 됩니다.
+         =================================================================================================================================== */}
         {/* <PopoverGroup className='hidden lg:flex lg:gap-x-12'>
           <Popover className='relative'>
             <PopoverButton className='flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900'>
@@ -169,24 +178,28 @@ export default function Header() {
             Company
           </a>
         </PopoverGroup> */}
-        <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
+
+        {/* =================================================================================================================================== 
+          평소에 hidden이다가 lg일 때 flex로 나타나게 해주고 있습니다. 저는 drawer navigator를 사용하지 않고, 이것을 그대로 사용하려고 합니다.
+         =================================================================================================================================== */}
+        <div className='lg:flex lg:flex-1 lg:justify-end'>
+          {/* <div className='hidden lg:flex lg:flex-1 lg:justify-end'> */}
           <a href='#' className='text-sm/20 font-bold text-gray-900'>
             Download App <span aria-hidden='true'>&rarr;</span>
           </a>
         </div>
       </nav>
 
+      {/* =================================================================================================================================== 
+        이 버튼은 lg 이하로 내려갔을 때, 좁혀지면서 'drawer navigator' 내부 구성 입니다.
+      =================================================================================================================================== */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className='lg:hidden'>
         <div className='fixed inset-0 z-10' />
         <DialogPanel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
             <a href='#' className='-m-1.5 p-1.5'>
               <span className='sr-only'>Your Company</span>
-              <img
-                alt=''
-                src='https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600'
-                className='h-8 w-auto'
-              />
+              <img alt='' src={urlogLogo} className='h-14 w-auto' />
             </a>
             <button
               type='button'

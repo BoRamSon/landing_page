@@ -2,7 +2,6 @@ import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/2
 import '../styles/LandingPage.css';
 import mainmap from '../assets/images/MainMap.png';
 import urlogLogo from '../assets/images/URLog_Logo.png';
-// import machine from '../assets/images/세탁기.png';
 
 const LandingPage: React.FC = () => {
   return (
