@@ -1,33 +1,28 @@
-/* Sidebar.css */
+/* 기본 사이드바 스타일 */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
+  width: 250px; /* 기본 사이드바 너비 */
   height: 100%;
   background-color: #333;
   color: white;
   padding: 20px;
+  transition: transform 0.3s ease-in-out; /* 사이드바 이동 애니메이션 */
 }
 
-.sidebar h2 {
-  text-align: center;
+/* 사이드바 숨기기 */
+.sidebar.hidden {
+  transform: translateX(-100%); /* 사이드바를 왼쪽으로 숨김 */
 }
 
-.sidebar nav ul {
-  list-style-type: none;
-  padding: 0;
-}
+/* 작은 화면에서는 사이드바 숨기기 */
+@media (max-width: 1200px) {
+  .sidebar {
+    transform: translateX(-100%); /* 기본적으로 숨김 */
+  }
 
-.sidebar nav ul li {
-  margin: 15px 0;
-}
-
-.sidebar nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.sidebar nav ul li a:hover {
-  color: #f39c12;
+  .sidebar.show {
+    transform: translateX(0); /* 작은 화면에서 사이드바 보이도록 */
+  }
 }

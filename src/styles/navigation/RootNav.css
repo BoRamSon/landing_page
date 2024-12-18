@@ -4,7 +4,14 @@
 }
 
 .MainNavigation {
-  margin-left: 220px;
   padding: 20px;
   flex: 1;
+}
+
+@media (min-width: 1200px) {
+  .MainNavigation {
+    margin-left: 220px;
+    padding: 20px;
+    flex: 1;
+  }
 }
