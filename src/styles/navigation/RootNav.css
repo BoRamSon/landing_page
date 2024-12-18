@@ -1,0 +1,10 @@
+.MainBox {
+  display: 'flex';
+  border: 5px solid blue;
+}
+
+.MainNavigation {
+  margin-left: 220px;
+  padding: 20px;
+  flex: 1;
+}
