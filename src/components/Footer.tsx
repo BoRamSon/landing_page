@@ -1,0 +1,27 @@
+import React from 'react';
+import '../styles/component/Footer.css';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className='footer'>
+      <div className='footer-content'>
+        <p>&copy; 2024 URLog Website. All rights reserved.</p>
+        <div className='footer-links'>
+          {/* <a href='/privacy-policy'>Privacy Policy</a> */}
+          {/* <a href='/terms-of-service'>Terms of Service</a> */}
+        </div>
+        <div className='social-icons'>
+          {/* <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
+            Facebook
+          </a> */}
+          <span>SNS :</span>
+          <a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
