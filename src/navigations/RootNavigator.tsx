@@ -1,12 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header.tsx';
 // import Sidebar from '../components/Sidebar.tsx';
 // import Button from '../components/ButtonBasic.tsx';
 import DownloadButton from '../components/ButtonDownload.tsx';
-
 import LandingPage from '../screens/LandingPage.tsx';
-
 // import HomePage from '../screens/HomePage.tsx';
 // import DetailPage from '../screens/DetailPage.tsx';
 import Footer from '../components/Footer.tsx';
