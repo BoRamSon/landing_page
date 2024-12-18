@@ -1,10 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from '../components/Header.tsx';
+// import Sidebar from '../components/Sidebar.tsx';
+// import Button from '../components/ButtonBasic.tsx';
+import DownloadButton from '../components/ButtonDownload.tsx';
+
 import LandingPage from '../screens/LandingPage.tsx';
+
 // import HomePage from '../screens/HomePage.tsx';
 // import DetailPage from '../screens/DetailPage.tsx';
-// import Sidebar from '../components/Sidebar.tsx';
-import Header from '../components/Header.tsx';
+import Footer from '../components/Footer.tsx';
 import '../styles/navigation/RootNav.css';
 
 const RootNavigator: React.FC = () => {
@@ -12,6 +17,7 @@ const RootNavigator: React.FC = () => {
     <Router>
       <div className='MainBox'>
         <Header />
+        {/* <Button /> */}
         {/* <Sidebar /> */}
 
         <div className='MainNavigation'>
@@ -21,6 +27,8 @@ const RootNavigator: React.FC = () => {
             {/* <Route path='/detail' element={<DetailPage />} /> */}
           </Routes>
         </div>
+        <DownloadButton />
+        <Footer />
       </div>
     </Router>
   );
