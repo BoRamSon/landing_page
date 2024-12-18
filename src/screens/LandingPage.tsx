@@ -113,17 +113,6 @@ const LandingPage: React.FC = () => {
         </div>
 
         {/* =================================================================================================================================== 
-          image 3  |||   grid prossess - lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-2 
-        =================================================================================================================================== */}
-        <div className='-mt-6 p-6 lg:sticky lg:top-4 lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-2 lg:overflow-hidden flex justify-center items-center'>
-          <img
-            alt='Photo'
-            src={mainmap}
-            className='w-[15rem] max-w-none rounded-xl sm:w-[18rem] md:w-[20rem] lg:w-[25rem] xl:w-[30rem]'
-          />
-        </div>
-
-        {/* =================================================================================================================================== 
           explanation 2  |||   grid prossess - lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
         <div className='lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
@@ -175,6 +164,17 @@ const LandingPage: React.FC = () => {
               </ul>
             </div>
           </div>
+        </div>
+
+        {/* =================================================================================================================================== 
+          image 3  |||   grid prossess - lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-2 
+        =================================================================================================================================== */}
+        <div className='-mt-6 p-6 lg:sticky lg:top-4 lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-2 lg:overflow-hidden flex justify-center items-center'>
+          <img
+            alt='Photo'
+            src={mainmap}
+            className='w-[15rem] max-w-none rounded-xl sm:w-[18rem] md:w-[20rem] lg:w-[25rem] xl:w-[30rem]'
+          />
         </div>
 
         {/* =================================================================================================================================== 
