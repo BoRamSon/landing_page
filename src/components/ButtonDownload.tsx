@@ -5,19 +5,19 @@ import '../styles/component/DownloadButton.css';
 const DownloadButton: React.FC = () => {
   return (
     <div className='buttons'>
-      <button type='button' className='btn btn-android'>
+      {/* <button type='button' className='btn btn-android'>
         Android GoogleStroe
       </button>
       <button type='button' className='btn btn-iOS'>
         iOS AppStore
-      </button>
+      </button> */}
 
-      {/* <a className='btn btn-android' href='#' role='button'>
+      <a className='btn btn-android' href='#' role='button'>
         Android GoogleStroe
       </a>
       <a className='btn btn-iOS' href='#' role='button'>
         iOS AppStore
-      </a> */}
+      </a>
     </div>
   );
 };
