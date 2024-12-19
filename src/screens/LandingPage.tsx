@@ -1,10 +1,14 @@
 import {
-  CloudArrowUpIcon,
+  // CloudArrowUpIcon,
   // LockClosedIcon,
   // ServerIcon,
   MagnifyingGlassPlusIcon,
   PhotoIcon,
   CpuChipIcon,
+  BookOpenIcon,
+  Square3Stack3DIcon,
+  ViewColumnsIcon,
+  TrashIcon,
 } from '@heroicons/react/20/solid';
 import '../styles/LandingPage.css';
 import mainmap from '../assets/images/MainMap.png';
@@ -64,12 +68,12 @@ const LandingPage: React.FC = () => {
                 URLog
               </h1> */}
               <div className='flex justify-center items-center lg:flex-1'>
-                <a href='#' className='-m-0.5'>
+                <a href='#' className=''>
                   <span className='sr-only'>Your Company</span>
-                  <img alt='' src={urlogLogo} className='h-20 w-auto' />
+                  <img alt='' src={urlogLogo} className='h-[150px] w-auto' />
                 </a>
               </div>
-              <p className='mt-2 font-[500] text-xl/8 text-gray-700'>
+              <p className='mt-1 font-[500] text-2xl text-gray-700'>
                 안녕하세요! <br />
                 'URLog'는 여행중 경로를 자동으로 기록하고 사진과 영상을 쉽게 정리하여 디지털앨범으로
                 출력할 수 있는 앱서비스입니다.
@@ -92,14 +96,14 @@ const LandingPage: React.FC = () => {
         </div>
 
         {/* =================================================================================================================================== 
-          fixed image 1 |||   grid prossess - lg:row-span-1 lg:row-start-1 lg:col-span-1 lg:col-start-2 
+          fixed image 1 - telescope |||   grid prossess - lg:row-span-1 lg:row-start-1 lg:col-span-1 lg:col-start-2 
         =================================================================================================================================== */}
         <div className='mt-6 p-6  lg:top-4 lg:row-span-1 lg:row-start-2 lg:col-span-1 lg:col-start-1 lg:overflow-hidden flex justify-center items-center'>
           {/* <div className='-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden'> */}
           <img
             alt=''
             src={telescope}
-            className='w-[8rem] max-w-none rounded-xl sm:w-[10rem] md:w-[13rem] lg:w-[17rem] xl:w-[21rem]'
+            className='w-[5rem] max-w-none rounded-xl sm:w-[8rem] md:w-[10rem] lg:w-[13rem] xl:w-[15rem]'
             // className='w-[38rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]'
           />
         </div>
@@ -108,7 +112,7 @@ const LandingPage: React.FC = () => {
           ************************** Explanation for my product *******************************
           explanation - GPS 1  |||   grid prossess - lg:row-span-1 lg:row-start-2 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+        <div className='lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-end items-center'>
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
@@ -116,16 +120,15 @@ const LandingPage: React.FC = () => {
                   aria-hidden='true'
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
-                <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
+                <span className='mt-16 ml-2 text-3xl font-bold tracking-tight text-gray-1000'>
                   1. 자동 GPS 위치 기록
                 </span>
               </div>
-              <p className='mt-3 text-left'>
-                내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
-                donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
-                commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
+              <p className='mt-3 text-left text-2xl font-[500]'>
+                여행 직전 GPS를 켜주세요! 자동으로 경로를 기록하고 보여줍니다!
+              </p>
+              <p className='mt-5 text-left'>
+                사용자의 위치 정보를 기반으로 기록된 위치는 언제 어디서나 확인할 수 있습니다.
               </p>
             </div>
           </div>
@@ -134,7 +137,7 @@ const LandingPage: React.FC = () => {
         {/* =================================================================================================================================== 
           explanation - GPS 2  |||   grid prossess - lg:row-span-1 lg:row-start-4 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-4 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+        {/* <div className='lg:row-span-1 lg:row-start-4 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-end items-center'>
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
@@ -155,7 +158,7 @@ const LandingPage: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* 
         =================================================================================================================================== 
@@ -172,7 +175,7 @@ const LandingPage: React.FC = () => {
         {/* =================================================================================================================================== 
           explanation - 2. album 1  |||   grid prossess - lg:row-span-1 lg:row-start-5 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-5 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+        <div className='lg:row-span-1 lg:row-start-5 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-end items-center'>
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
@@ -181,13 +184,49 @@ const LandingPage: React.FC = () => {
                   2. 앨범 확인 및 분류 정리
                 </span>
               </div>
-              <p className='mt-3 text-left'>
-                내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
-                donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
-                commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
-              </p>
+
+              <div className='flex justify-start items-center'>
+                <Square3Stack3DIcon
+                  aria-hidden='true'
+                  className='mt-3 size-6 flex-none text-black'
+                />
+                <span className='mt-3 ml-5 text-left text-xl font-[500]'>
+                  "여행중 촬영한 다량의 사진과 영상들.. 정리하기 귀찮아.."
+                </span>
+              </div>
+              <div className='flex justify-start items-center'>
+                <ViewColumnsIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
+                <span className='mt-3 ml-5 text-left text-xl font-[500]'>
+                  "이 많은 사진들 중 베스트사진을 선택하고 나머지를 일일이 삭제하는게 힘들어."
+                </span>
+              </div>
+              <div className='flex justify-start items-center'>
+                <TrashIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
+                <span className='mt-3 ml-5 text-left text-xl font-[500]'>
+                  "용량이 가득 찼네? 뭘 삭제해야 하는 거야.."
+                </span>
+              </div>
+
+              <div className='ml-10 max-w-xl text-base/7 text-gray-700 lg:max-w-4xl'>
+                <div className='flex ml-10 justify-start items-center'>
+                  <CpuChipIcon
+                    aria-hidden='true'
+                    className='mt-16 size-8 flex-none text-indigo-600'
+                  />
+                  <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
+                    핵심기능 소개 <br />
+                  </span>
+                </div>
+                <p className='mt-3 text-left text-lg font-[500]'>
+                  - 날짜별, 시간대별, 위치별 정렬 / 폴더그룹화 만들기 <br />
+                  - 배경사진, 사물사진, 인물사진(얼굴, 상반신, 전신 등)을 구분 및 정렬 / 폴더그룹화
+                  만들기 <br />
+                  - 중복되거나 비슷한 사진들을 인식하고 베스트컷와 B컷 분류하여 그룹화 <br />
+                  - 베스트컷 선정 후 빠르게 B컷을 모두 삭제하는 기능 제공
+                  <br />- 주기적으로 사진 및 동영상 삭제 프로세스를 제공하여 정리가 되지 않았거나 더
+                  이상 필요없 는 사진 및 영상을 정리하는 서비스 제공
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -208,7 +247,7 @@ const LandingPage: React.FC = () => {
         {/* =================================================================================================================================== 
           explanation - 2. album 2 |||   grid prossess - lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
-        {/* <div className='lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+        {/* <div className='lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-end items-center'>
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
@@ -245,11 +284,11 @@ const LandingPage: React.FC = () => {
         {/* =================================================================================================================================== 
           explanation - 3. pdf print 1  |||   grid prossess - lg:row-span-1 lg:row-start-7 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-7 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+        <div className='lg:row-span-1 lg:row-start-7 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-end items-center'>
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
-                <CloudArrowUpIcon
+                <BookOpenIcon
                   aria-hidden='true'
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
@@ -271,11 +310,11 @@ const LandingPage: React.FC = () => {
         {/* =================================================================================================================================== 
           explanation - 3. pdf print 2 |||   grid prossess - lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+        <div className='lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-end items-center'>
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
-                <CloudArrowUpIcon
+                <BookOpenIcon
                   aria-hidden='true'
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
@@ -308,7 +347,7 @@ const LandingPage: React.FC = () => {
         {/* =================================================================================================================================== 
           ??????????????    |||   grid prossess - lg:row-span-1 lg:row-start-9 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-9 lg:col-span-1 lg:col-start-1  lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+        {/* <div className='lg:row-span-1 lg:row-start-9 lg:col-span-1 lg:col-start-1  lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-end items-center'>
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <h2 className='mt-16 text-2xl font-bold tracking-tight text-gray-900'>
@@ -323,15 +362,15 @@ const LandingPage: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/*
         =================================================================================================================================== 
           마지막 핵심기능  |||   grid prossess - lg:row-span-1 lg:row-start-10 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-10 lg:col-span-2 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+        {/* <div className='lg:row-span-1 lg:row-start-10 lg:col-span-2 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 flex justify-start xl:justify-center items-center'>
           <div className='lg:pr-4'>
-            <div className='max-w-xl text-base/7 text-gray-700 lg:max-w-4xl'>
+            <div className='ml-10 max-w-xl text-base/7 text-gray-700 lg:max-w-4xl'>
               <div className='flex ml-10 justify-start items-center'>
                 <CpuChipIcon
                   aria-hidden='true'
@@ -349,9 +388,9 @@ const LandingPage: React.FC = () => {
                 - 베스트컷 선정 후 빠르게 B컷을 모두 삭제하는 기능 제공
                 <br />- 주기적으로 사진 및 동영상 삭제 프로세스를 제공하여 정리가 되지 않았거나 더
                 이상 필요없 는 사진 및 영상을 정리하는 서비스 제공
-              </p>
+              </p> */}
 
-              {/* <ul role='list' className='mt-8 space-y-8 text-gray-600'>
+        {/* <ul role='list' className='mt-8 space-y-8 text-gray-600'>
                 <li className='flex gap-x-3'>
                   <CloudArrowUpIcon
                     aria-hidden='true'
@@ -392,9 +431,9 @@ const LandingPage: React.FC = () => {
                   </span>
                 </li>
               </ul> */}
-            </div>
+        {/* </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
