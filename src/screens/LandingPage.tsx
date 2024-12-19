@@ -1,8 +1,16 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid';
+import {
+  CloudArrowUpIcon,
+  // LockClosedIcon,
+  // ServerIcon,
+  MagnifyingGlassPlusIcon,
+  PhotoIcon,
+  CpuChipIcon,
+} from '@heroicons/react/20/solid';
 import '../styles/LandingPage.css';
 import mainmap from '../assets/images/MainMap.png';
 import urlogLogo from '../assets/images/URLog_Logo.png';
 import telescope from '../assets/images/image_Telescope.png';
+import toomuchphoto from '../assets/images/tooMuchPhoto.png';
 
 const LandingPage: React.FC = () => {
   return (
@@ -84,7 +92,7 @@ const LandingPage: React.FC = () => {
         </div>
 
         {/* =================================================================================================================================== 
-          image 1-2 |||   grid prossess - lg:row-span-1 lg:row-start-1 lg:col-span-1 lg:col-start-2 
+          fixed image 1 |||   grid prossess - lg:row-span-1 lg:row-start-1 lg:col-span-1 lg:col-start-2 
         =================================================================================================================================== */}
         <div className='mt-6 p-6  lg:top-4 lg:row-span-1 lg:row-start-2 lg:col-span-1 lg:col-start-1 lg:overflow-hidden flex justify-center items-center'>
           {/* <div className='-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden'> */}
@@ -104,7 +112,7 @@ const LandingPage: React.FC = () => {
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
-                <CloudArrowUpIcon
+                <MagnifyingGlassPlusIcon
                   aria-hidden='true'
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
@@ -112,7 +120,7 @@ const LandingPage: React.FC = () => {
                   1. 자동 GPS 위치 기록
                 </span>
               </div>
-              <p className='mt-3'>
+              <p className='mt-3 text-left'>
                 내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
                 risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
                 donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
@@ -138,7 +146,7 @@ const LandingPage: React.FC = () => {
                   (설명이나 사진 첨부)
                 </span>
               </div>
-              <p className='mt-3'>
+              <p className='mt-3 text-left'>
                 내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
                 risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
                 donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
@@ -151,7 +159,7 @@ const LandingPage: React.FC = () => {
 
         {/* 
         =================================================================================================================================== 
-          image 2  |||   grid prossess - lg:row-span-1 lg:row-start-2 lg:col-span-1 lg:col-start-2 
+          image 2  |||   grid prossess - lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-2 
         =================================================================================================================================== */}
         <div className='-mt-6 p-6 lg:sticky lg:top-4 lg:row-span-2 lg:row-start-3 lg:col-span-1 lg:col-start-2 lg:overflow-hidden flex justify-center items-center'>
           <img
@@ -168,15 +176,12 @@ const LandingPage: React.FC = () => {
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
-                <CloudArrowUpIcon
-                  aria-hidden='true'
-                  className='mt-16 size-8 flex-none text-indigo-600'
-                />
+                <PhotoIcon aria-hidden='true' className='mt-16 size-8 flex-none text-indigo-600' />
                 <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
                   2. 앨범 확인 및 분류 정리
                 </span>
               </div>
-              <p className='mt-3'>
+              <p className='mt-3 text-left'>
                 내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
                 risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
                 donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
@@ -185,12 +190,25 @@ const LandingPage: React.FC = () => {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* =================================================================================================================================== 
+          fixed image 2. album imange |||   grid prossess - lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-2 
+        =================================================================================================================================== */}
+        <div className='mt-6 p-6  lg:top-4 lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 lg:overflow-hidden flex justify-center items-center'>
+          {/* <div className='-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden'> */}
+          <img
+            alt=''
+            src={toomuchphoto}
+            className='w-[8rem] max-w-none rounded-xl sm:w-[10rem] md:w-[13rem] lg:w-[17rem] xl:w-[21rem]'
+            // className='w-[38rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]'
+          />
         </div>
 
         {/* =================================================================================================================================== 
           explanation - 2. album 2 |||   grid prossess - lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+        {/* <div className='lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
@@ -211,70 +229,7 @@ const LandingPage: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
-
-        {/* =================================================================================================================================== 
-          image 2  |||   grid prossess - lg:row-span-1 lg:row-start-2 lg:col-span-1 lg:col-start-2 
-        =================================================================================================================================== */}
-        <div className='-mt-6 p-6 lg:sticky lg:top-4 lg:row-span-2 lg:row-start-3 lg:col-span-1 lg:col-start-2 lg:overflow-hidden flex justify-center items-center'>
-          <img
-            alt='Photo'
-            src={mainmap}
-            className='w-[15rem] max-w-none rounded-xl sm:w-[18rem] md:w-[20rem] lg:w-[25rem] xl:w-[30rem]'
-          />
-        </div>
-
-        {/* =================================================================================================================================== 
-          explanation - 3.  |||   grid prossess - lg:row-span-1 lg:row-start-7 lg:col-span-1 lg:col-start-1 
-        =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-7 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
-          <div className='lg:pr-4'>
-            <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
-              <div className='flex ml-10 justify-start items-center'>
-                <CloudArrowUpIcon
-                  aria-hidden='true'
-                  className='mt-16 size-8 flex-none text-indigo-600'
-                />
-                <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
-                  2. 앨범 확인 및 분류 정리
-                </span>
-              </div>
-              <p className='mt-3'>
-                내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
-                donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
-                commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* =================================================================================================================================== 
-          explanation - 3. |||   grid prossess - lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 
-        =================================================================================================================================== */}
-        <div className='lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
-          <div className='lg:pr-4'>
-            <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
-              <div className='flex ml-10 justify-start items-center'>
-                <CloudArrowUpIcon
-                  aria-hidden='true'
-                  className='mt-16 size-8 flex-none text-indigo-600'
-                />
-                <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
-                  (설명이나 사진 첨부)
-                </span>
-              </div>
-              <p className='mt-3'>
-                내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
-                donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
-                commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
-              </p>
-            </div>
-          </div>
-        </div>
+        </div> */}
 
         {/* =================================================================================================================================== 
           image 3  |||   grid prossess - lg:row-span-1 lg:row-start-5 lg:col-span-1 lg:col-start-2 
@@ -288,7 +243,70 @@ const LandingPage: React.FC = () => {
         </div>
 
         {/* =================================================================================================================================== 
-          explanation 4  |||   grid prossess - lg:row-span-1 lg:row-start-9 lg:col-span-1 lg:col-start-1 
+          explanation - 3. pdf print 1  |||   grid prossess - lg:row-span-1 lg:row-start-7 lg:col-span-1 lg:col-start-1 
+        =================================================================================================================================== */}
+        <div className='lg:row-span-1 lg:row-start-7 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+          <div className='lg:pr-4'>
+            <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
+              <div className='flex ml-10 justify-start items-center'>
+                <CloudArrowUpIcon
+                  aria-hidden='true'
+                  className='mt-16 size-8 flex-none text-indigo-600'
+                />
+                <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
+                  3. 여행후 디지털앨범(PDF) 출력
+                </span>
+              </div>
+              <p className='mt-3 text-left'>
+                내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
+                risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
+                donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
+                commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
+                sed amet vitae sed turpis id.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* =================================================================================================================================== 
+          explanation - 3. pdf print 2 |||   grid prossess - lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 
+        =================================================================================================================================== */}
+        <div className='lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
+          <div className='lg:pr-4'>
+            <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
+              <div className='flex ml-10 justify-start items-center'>
+                <CloudArrowUpIcon
+                  aria-hidden='true'
+                  className='mt-16 size-8 flex-none text-indigo-600'
+                />
+                <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
+                  (설명이나 사진 첨부)
+                </span>
+              </div>
+              <p className='mt-3 text-left'>
+                내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
+                risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
+                donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
+                commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
+                sed amet vitae sed turpis id.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* =================================================================================================================================== 
+          image 4  |||   grid prossess - lg:row-span-1 lg:row-start-7 lg:col-span-1 lg:col-start-2 
+        =================================================================================================================================== */}
+        <div className='-mt-6 p-6 lg:sticky lg:top-4 lg:row-span-2 lg:row-start-7 lg:col-span-1 lg:col-start-2 lg:overflow-hidden flex justify-center items-center'>
+          <img
+            alt='Photo'
+            src={mainmap}
+            className='w-[15rem] max-w-none rounded-xl sm:w-[18rem] md:w-[20rem] lg:w-[25rem] xl:w-[30rem]'
+          />
+        </div>
+
+        {/* =================================================================================================================================== 
+          ??????????????    |||   grid prossess - lg:row-span-1 lg:row-start-9 lg:col-span-1 lg:col-start-1 
         =================================================================================================================================== */}
         <div className='lg:row-span-1 lg:row-start-9 lg:col-span-1 lg:col-start-1  lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
           <div className='lg:pr-4'>
@@ -313,9 +331,9 @@ const LandingPage: React.FC = () => {
         =================================================================================================================================== */}
         <div className='lg:row-span-1 lg:row-start-10 lg:col-span-2 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-center items-center'>
           <div className='lg:pr-4'>
-            <div className='max-w-full text-base/7 text-gray-700 lg:max-w-full'>
+            <div className='max-w-xl text-base/7 text-gray-700 lg:max-w-4xl'>
               <div className='flex ml-10 justify-start items-center'>
-                <CloudArrowUpIcon
+                <CpuChipIcon
                   aria-hidden='true'
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
@@ -323,7 +341,17 @@ const LandingPage: React.FC = () => {
                   핵심기능 소개 <br />
                 </span>
               </div>
-              <ul role='list' className='mt-8 space-y-8 text-gray-600'>
+              <p className='mt-3 text-left'>
+                - 날짜별, 시간대별, 위치별 정렬 / 폴더그룹화 만들기 <br />
+                - 배경사진, 사물사진, 인물사진(얼굴, 상반신, 전신 등)을 구분 및 정렬 / 폴더그룹화
+                만들기 <br />
+                - 중복되거나 비슷한 사진들을 인식하고 베스트컷와 B컷 분류하여 그룹화 <br />
+                - 베스트컷 선정 후 빠르게 B컷을 모두 삭제하는 기능 제공
+                <br />- 주기적으로 사진 및 동영상 삭제 프로세스를 제공하여 정리가 되지 않았거나 더
+                이상 필요없 는 사진 및 영상을 정리하는 서비스 제공
+              </p>
+
+              {/* <ul role='list' className='mt-8 space-y-8 text-gray-600'>
                 <li className='flex gap-x-3'>
                   <CloudArrowUpIcon
                     aria-hidden='true'
@@ -363,7 +391,7 @@ const LandingPage: React.FC = () => {
                     morbi lobortis.
                   </span>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
