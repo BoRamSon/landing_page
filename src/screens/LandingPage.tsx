@@ -14,7 +14,7 @@ import '../styles/LandingPage.css';
 import mainmap from '../assets/images/MainMap.png';
 import urlogLogo from '../assets/images/URLog_Logo.png';
 import telescope from '../assets/images/image_Telescope.png';
-import toomuchphoto from '../assets/images/tooMuchPhoto.png';
+// import toomuchphoto from '../assets/images/tooMuchPhoto.png';
 
 const LandingPage: React.FC = () => {
   return (
@@ -98,7 +98,7 @@ const LandingPage: React.FC = () => {
         {/* =================================================================================================================================== 
           fixed image 1 - telescope |||   grid prossess - lg:row-span-1 lg:row-start-1 lg:col-span-1 lg:col-start-2 
         =================================================================================================================================== */}
-        <div className='mt-6 p-6  lg:top-4 lg:row-span-1 lg:row-start-2 lg:col-span-1 lg:col-start-1 lg:overflow-hidden flex justify-center items-center'>
+        <div className='mt-6 p-6 lg:top-4 lg:row-span-1 lg:row-start-2 lg:col-span-1 lg:col-start-1 lg:overflow-hidden flex justify-center items-center'>
           {/* <div className='-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden'> */}
           <img
             alt=''
@@ -234,15 +234,14 @@ const LandingPage: React.FC = () => {
         {/* =================================================================================================================================== 
           fixed image 2. album imange |||   grid prossess - lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-2 
         =================================================================================================================================== */}
-        <div className='mt-6 p-6  lg:top-4 lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 lg:overflow-hidden flex justify-center items-center'>
-          {/* <div className='-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden'> */}
+        {/* <div className='mt-6 p-6  lg:top-4 lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 lg:overflow-hidden flex justify-center items-center lg:block hidden'>
           <img
             alt=''
             src={toomuchphoto}
             className='w-[8rem] max-w-none rounded-xl sm:w-[10rem] md:w-[13rem] lg:w-[17rem] xl:w-[21rem]'
             // className='w-[38rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]'
           />
-        </div>
+        </div> */}
 
         {/* =================================================================================================================================== 
           explanation - 2. album 2 |||   grid prossess - lg:row-span-1 lg:row-start-6 lg:col-span-1 lg:col-start-1 
