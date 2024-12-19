@@ -15,6 +15,7 @@ import mainmap from '../assets/images/MainMap.png';
 import urlogLogo from '../assets/images/URLog_Logo.png';
 import telescope from '../assets/images/image_Telescope.png';
 // import toomuchphoto from '../assets/images/tooMuchPhoto.png';
+import digitalalbum from '../assets/images/DigitalAlbum.png';
 
 const LandingPage: React.FC = () => {
   return (
@@ -70,7 +71,8 @@ const LandingPage: React.FC = () => {
               <div className='flex justify-center items-center lg:flex-1'>
                 <a href='#' className=''>
                   <span className='sr-only'>Your Company</span>
-                  <img alt='' src={urlogLogo} className='h-[150px] w-auto' />
+                  <img src='URLogLOGO.svg' alt='logo' className='h-[150px] w-auto' />
+                  {/* <img alt='' src={urlogLogo} className='h-[150px] w-auto' /> */}
                 </a>
               </div>
               <p className='mt-1 font-[500] text-2xl text-gray-700'>
@@ -337,9 +339,10 @@ const LandingPage: React.FC = () => {
         =================================================================================================================================== */}
         <div className='-mt-6 p-6 lg:sticky lg:top-4 lg:row-span-2 lg:row-start-7 lg:col-span-1 lg:col-start-2 lg:overflow-hidden flex justify-center items-center'>
           <img
-            alt='Photo'
-            src={mainmap}
-            className='w-[15rem] max-w-none rounded-xl sm:w-[18rem] md:w-[20rem] lg:w-[25rem] xl:w-[30rem]'
+            alt='DigitalAlbum'
+            src={digitalalbum}
+            className='w-[12rem] max-w-none rounded-xl sm:w-[15rem] md:w-[17rem] lg:w-[22rem] xl:w-[27rem]'
+            // className='w-[15rem] max-w-none rounded-xl sm:w-[18rem] md:w-[20rem] lg:w-[25rem] xl:w-[30rem]'
           />
         </div>
 
