@@ -1,7 +1,7 @@
 import {
   MagnifyingGlassPlusIcon,
   PhotoIcon,
-  CpuChipIcon,
+  // CpuChipIcon,
   BookOpenIcon,
   Square3Stack3DIcon,
   ViewColumnsIcon,
@@ -96,8 +96,8 @@ const LandingPage: React.FC = () => {
                   aria-hidden='true'
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
-                <span className='mt-16 ml-2 text-3xl font-bold tracking-tight text-gray-1000'>
-                  1. 이게 진짜 1번입니다. 여기는 사진찍는 것을 보여줄 것입니다.
+                <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
+                  1. 사진촬영
                 </span>
               </div>
               <p className='mt-3 text-left text-2xl font-[500]'>앱 내에서 사진을 촬영해주세요!</p>
@@ -122,7 +122,7 @@ const LandingPage: React.FC = () => {
                   aria-hidden='true'
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
-                <span className='mt-16 ml-2 text-3xl font-bold tracking-tight text-gray-1000'>
+                <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
                   1. 자동 GPS 위치 기록
                 </span>
               </div>
@@ -149,8 +149,8 @@ const LandingPage: React.FC = () => {
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
                 <PhotoIcon aria-hidden='true' className='mt-16 size-8 flex-none text-indigo-600' />
-                <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
-                  2. 앨범 확인 및 분류 정리
+                <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
+                  2. Gallary 확인하고 빠르게 정리하기
                 </span>
               </div>
 
@@ -176,7 +176,7 @@ const LandingPage: React.FC = () => {
                 </span>
               </div>
 
-              <div className='ml-10 max-w-xl text-base/7 text-gray-700 lg:max-w-4xl'>
+              {/* <div className='ml-10 max-w-xl text-base/7 text-gray-700 lg:max-w-4xl'>
                 <div className='flex ml-10 justify-start items-center'>
                   <CpuChipIcon
                     aria-hidden='true'
@@ -195,7 +195,7 @@ const LandingPage: React.FC = () => {
                   <br />- 주기적으로 사진 및 동영상 삭제 프로세스를 제공하여 정리가 되지 않았거나 더
                   이상 필요없 는 사진 및 영상을 정리하는 서비스 제공
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -216,7 +216,7 @@ const LandingPage: React.FC = () => {
                   aria-hidden='true'
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
-                <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
+                <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
                   3. 여행후 디지털앨범(PDF) 출력
                 </span>
               </div>
@@ -239,7 +239,7 @@ const LandingPage: React.FC = () => {
                   aria-hidden='true'
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
-                <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
+                <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
                   (설명이나 사진 첨부)
                 </span>
               </div>
