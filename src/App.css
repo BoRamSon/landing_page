@@ -6,8 +6,8 @@ body {
 }
 
 #root {
-  width: 99%; /* 화면의 너비를 100%로 설정 */
-  height: 99vh; /* 화면의 높이를 100%로 설정 */
+  width: 100%; /* 화면의 너비를 100%로 설정 */
+  height: 100vh; /* 화면의 높이를 100%로 설정 */
   margin: 0; /* 여백 제거 */
   padding: 0; /* 패딩 제거 */
 }
@@ -15,7 +15,7 @@ body {
 #root {
   /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 0.1rem;
+  /* padding: 0.1rem; */
   text-align: center;
   /* border: 2px solid red; */
 }
