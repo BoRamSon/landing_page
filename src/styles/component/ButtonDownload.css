@@ -1,0 +1,88 @@
+.buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  height: 52px;
+  border: none;
+}
+
+.store-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.btn-subtitle {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.btn-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.btn-android {
+  background-color: #414141;
+  color: white;
+}
+
+.btn-android:hover {
+  background-color: #535353;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-android:active {
+  background-color: #2d2d2d;
+  transform: translateY(0);
+}
+
+.btn-iOS {
+  background-color: #000000;
+  color: white;
+}
+
+.btn-iOS:hover {
+  background-color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-iOS:active {
+  background-color: #000000;
+  transform: translateY(0);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
