@@ -19,7 +19,10 @@ const NoticePage: React.FC = () => {
             >
               Go back home
             </a>
-            <a href='#' className='text-sm font-semibold text-gray-900'>
+            <a
+              href='https://forms.gle/qzE4bD2saf88fZyF8'
+              className='text-sm font-semibold text-gray-900'
+            >
               ✔️ 의견 보내기 <span aria-hidden='true'>&rarr;</span>
             </a>
           </div>
