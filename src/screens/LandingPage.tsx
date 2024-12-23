@@ -67,8 +67,8 @@ const LandingPage: React.FC = () => {
               </div>
               <p className='mt-1 font-[500] text-2xl text-gray-700'>
                 안녕하세요! <br />
-                'URLog'는 여행중 경로를 자동으로 기록하고 사진과 영상을 쉽게 정리하여 디지털앨범으로
-                출력할 수 있는 앱서비스입니다.
+                'URLog'는 여행중 찍은 사진을 경로와 함께 지도에서 볼 수 있고 다량으로 찍은 사진을
+                빠르게 정리하여 디지털앨범으로 출력할 수 있는 앱서비스입니다.
               </p>
             </div>
           </div>
@@ -153,7 +153,7 @@ const LandingPage: React.FC = () => {
               <div className='flex ml-10 justify-start items-center'>
                 <PhotoIcon aria-hidden='true' className='mt-16 size-8 flex-none text-indigo-600' />
                 <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
-                  2. Gallary 확인하고 빠르게 정리하기
+                  3. 갤러리에서 사진 확인 및 정리
                 </span>
               </div>
 
@@ -208,7 +208,7 @@ const LandingPage: React.FC = () => {
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
                 <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
-                  4. 여행후 디지털앨범(PDF) 출력
+                  4. 여행이 끝나면 '디지털 앨범!'
                 </span>
               </div>
 
