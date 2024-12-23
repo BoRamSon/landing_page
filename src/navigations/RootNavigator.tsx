@@ -5,6 +5,7 @@ import Header from '../components/Header.tsx';
 // import Button from '../components/ButtonBasic.tsx';
 import DownloadButton from '../components/ButtonDownload.tsx';
 import LandingPage from '../screens/LandingPage.tsx';
+import NoticePage from '../screens/NoticePage.tsx';
 // import HomePage from '../screens/HomePage.tsx';
 // import DetailPage from '../screens/DetailPage.tsx';
 import Footer from '../components/Footer.tsx';
@@ -21,6 +22,7 @@ const RootNavigator: React.FC = () => {
         <div className='MainNavigation'>
           <Routes>
             <Route path='/' element={<LandingPage />} />
+            <Route path='/notice' element={<NoticePage />} />
             {/* <Route path='/home' element={<HomePage />} /> */}
             {/* <Route path='/detail' element={<DetailPage />} /> */}
           </Routes>
