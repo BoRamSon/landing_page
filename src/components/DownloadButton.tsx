@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/component/ButtonDownload.css';
+import '../styles/component/DownloadButton.css';
 import { useNavigate } from 'react-router-dom';
 import { ArrowDownCircleIcon } from '@heroicons/react/20/solid';
 
