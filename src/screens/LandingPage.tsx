@@ -123,18 +123,18 @@ const LandingPage: React.FC = () => {
                 <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
                   2. 지도에서 한눈에 사진 및 경로 확인
                 </span>
-
-                <div className='flex justify-start items-center'>
-                  <MapPinIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
-                  <span className='mt-3 ml-5 text-left text-2xl font-[500]'>
-                    Map 화면에서 위치와 함께 찍은 사진을 볼 수 있습니다.
-                  </span>
-                </div>
-
-                <p className='mt-5 text-left text-xl font-[500]'>
-                  찍은 사진과 함께 순서별로 경로가 표시되요!
-                </p>
               </div>
+
+              <div className='flex justify-start items-center'>
+                <MapPinIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
+                <span className='mt-3 ml-5 text-left text-2xl font-[500]'>
+                  Map 화면에서 위치와 함께 찍은 사진을 볼 수 있습니다.
+                </span>
+              </div>
+
+              <p className='mt-5 text-left text-xl font-[500]'>
+                찍은 사진과 함께 순서별로 경로가 표시되요!
+              </p>
             </div>
           </div>
         </div>
