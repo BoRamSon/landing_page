@@ -7,7 +7,7 @@ const DownloadButton: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='buttons'>
+    <div className='buttons ml-5 mr-5'>
       <button type='button' className='btn btn-android' onClick={() => navigate('/notice')}>
         <ArrowDownCircleIcon className='store-icon' />
         <div className='btn-text'>
