@@ -1,11 +1,12 @@
 import {
-  MagnifyingGlassPlusIcon,
   PhotoIcon,
-  // CpuChipIcon,
   BookOpenIcon,
-  Square3Stack3DIcon,
-  ViewColumnsIcon,
-  TrashIcon,
+  CameraIcon,
+  CheckBadgeIcon,
+  BoltIcon,
+  MapIcon,
+  MapPinIcon,
+  DocumentIcon,
 } from '@heroicons/react/20/solid';
 import '../styles/LandingPage.css';
 import cover from '../assets/images/URLog_Cover_1x.png';
@@ -14,6 +15,7 @@ import album from '../assets/images/URLog_Gallary_1x.png';
 import digitalalbum from '../assets/images/URLog_DigitalAlbum_1x.png';
 import camera from '../assets/images/URLog_Camera.png';
 import telescope from '../assets/images/image_Telescope.png';
+import bestshot from '../assets/images/URLog_DigitalAlbum_BestShot.png';
 
 const LandingPage: React.FC = () => {
   return (
@@ -92,16 +94,15 @@ const LandingPage: React.FC = () => {
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
-                <MagnifyingGlassPlusIcon
-                  aria-hidden='true'
-                  className='mt-16 size-8 flex-none text-indigo-600'
-                />
+                <CameraIcon aria-hidden='true' className='mt-16 size-8 flex-none text-indigo-600' />
                 <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
-                  1. 사진촬영
+                  1. 앱 내 사진촬영
                 </span>
               </div>
-              <p className='mt-3 text-left text-2xl font-[500]'>앱 내에서 사진을 촬영해주세요!</p>
-              <p className='mt-5 text-left'>정말 재미있죠?</p>
+              <p className='mt-3 text-left text-2xl font-[500]'>
+                앱 내에서 원하는대로 사진을 찍어보세요!
+              </p>
+              <p className='mt-5 text-left'></p>
             </div>
           </div>
         </div>
@@ -118,20 +119,22 @@ const LandingPage: React.FC = () => {
           <div className='lg:pr-4'>
             <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
               <div className='flex ml-10 justify-start items-center'>
-                <MagnifyingGlassPlusIcon
-                  aria-hidden='true'
-                  className='mt-16 size-8 flex-none text-indigo-600'
-                />
+                <MapIcon aria-hidden='true' className='mt-16 size-8 flex-none text-indigo-600' />
                 <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
-                  1. 자동 GPS 위치 기록
+                  2. 지도에서 한눈에 사진 및 경로 확인
                 </span>
+
+                <div className='flex justify-start items-center'>
+                  <MapPinIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
+                  <span className='mt-3 ml-5 text-left text-2xl font-[500]'>
+                    Map 화면에서 위치와 함께 찍은 사진을 볼 수 있습니다.
+                  </span>
+                </div>
+
+                <p className='mt-5 text-left text-xl font-[500]'>
+                  찍은 사진과 함께 순서별로 경로가 표시되요!
+                </p>
               </div>
-              <p className='mt-3 text-left text-2xl font-[500]'>
-                여행 직전 GPS를 켜주세요! 자동으로 경로를 기록하고 보여줍니다!
-              </p>
-              <p className='mt-5 text-left'>
-                사용자의 위치 정보를 기반으로 기록된 위치는 언제 어디서나 확인할 수 있습니다.
-              </p>
             </div>
           </div>
         </div>
@@ -155,49 +158,37 @@ const LandingPage: React.FC = () => {
               </div>
 
               <div className='flex justify-start items-center'>
-                <Square3Stack3DIcon
-                  aria-hidden='true'
-                  className='mt-3 size-6 flex-none text-black'
-                />
-                <span className='mt-3 ml-5 text-left text-xl font-[500]'>
-                  "여행중 촬영한 다량의 사진과 영상들.. 정리하기 귀찮아.."
-                </span>
-              </div>
-              <div className='flex justify-start items-center'>
-                <ViewColumnsIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
-                <span className='mt-3 ml-5 text-left text-xl font-[500]'>
-                  "이 많은 사진들 중 베스트사진을 선택하고 나머지를 일일이 삭제하는게 힘들어."
-                </span>
-              </div>
-              <div className='flex justify-start items-center'>
-                <TrashIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
-                <span className='mt-3 ml-5 text-left text-xl font-[500]'>
-                  "용량이 가득 찼네? 뭘 삭제해야 하는 거야.."
+                <CheckBadgeIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
+                <span className='mt-3 ml-5 text-left text-2xl font-[500]'>
+                  찍은 사진들은 Gallary에서 확인할 수 있습니다!
                 </span>
               </div>
 
-              {/* <div className='ml-10 max-w-xl text-base/7 text-gray-700 lg:max-w-4xl'>
-                <div className='flex ml-10 justify-start items-center'>
-                  <CpuChipIcon
-                    aria-hidden='true'
-                    className='mt-16 size-8 flex-none text-indigo-600'
-                  />
-                  <span className='mt-16 ml-2 text-2xl font-bold tracking-tight text-gray-1000'>
-                    핵심기능 소개 <br />
-                  </span>
-                </div>
-                <p className='mt-3 text-left text-lg font-[500]'>
-                  - 날짜별, 시간대별, 위치별 정렬 / 폴더그룹화 만들기 <br />
-                  - 배경사진, 사물사진, 인물사진(얼굴, 상반신, 전신 등)을 구분 및 정렬 / 폴더그룹화
-                  만들기 <br />
-                  - 중복되거나 비슷한 사진들을 인식하고 베스트컷와 B컷 분류하여 그룹화 <br />
-                  - 베스트컷 선정 후 빠르게 B컷을 모두 삭제하는 기능 제공
-                  <br />- 주기적으로 사진 및 동영상 삭제 프로세스를 제공하여 정리가 되지 않았거나 더
-                  이상 필요없 는 사진 및 영상을 정리하는 서비스 제공
-                </p>
-              </div> */}
+              <div className='flex justify-start items-center'>
+                <BoltIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
+                <span className='mt-3 ml-5 text-left text-2xl font-[500]'>
+                  해외여행 중 많은 사진들을 촬영하셨죠??
+                </span>
+              </div>
+
+              <p className='mt-5 text-left text-xl font-[500]'>
+                - 이제 위치별, 날짜별, 인물별 빠르게 나눠보세요!
+                <br />
+                <br />- 중복사진이 있다면 바로 삭제하실 수 있어요.
+                <br />
+                <br />- 한번에 여러장 찍힌 사진들을 자동으로 묶어주고 베스트샷을 선정하면 나머지
+                사진을 한번에 삭제해줍니다.
+              </p>
             </div>
           </div>
+        </div>
+
+        <div className='mt-0 p-6  lg:top-4 lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 lg:overflow-hidden grid place-items-center max-h-25 mb-200'>
+          <img
+            alt='bestshot'
+            src={bestshot}
+            className='w-[8rem] sm:w-[10rem] md:w-[13rem] lg:w-[17rem] xl:w-[21rem]'
+          />
         </div>
 
         <div className='-mt-6 p-6 lg:sticky lg:top-4 lg:row-span-2 lg:row-start-7 lg:col-span-1 lg:col-start-2 lg:overflow-hidden flex justify-center items-center'>
@@ -217,38 +208,30 @@ const LandingPage: React.FC = () => {
                   className='mt-16 size-8 flex-none text-indigo-600'
                 />
                 <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
-                  3. 여행후 디지털앨범(PDF) 출력
+                  4. 여행후 디지털앨범(PDF) 출력
                 </span>
               </div>
-              <p className='mt-3 text-left'>
-                내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
-                donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
-                commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <div className='lg:row-span-1 lg:row-start-10 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-end items-center'>
-          <div className='lg:pr-4'>
-            <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
-              <div className='flex ml-10 justify-start items-center'>
-                <BookOpenIcon
-                  aria-hidden='true'
-                  className='mt-16 size-8 flex-none text-indigo-600'
-                />
-                <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
-                  (설명이나 사진 첨부)
+              <div className='flex justify-start items-center'>
+                <DocumentIcon aria-hidden='true' className='mt-3 size-6 flex-none text-black' />
+                <span className='mt-3 ml-5 text-left text-2xl font-[500]'>
+                  여행 후 특정 기간을 지정하여 디지털 앨범을 만들어보세요!
                 </span>
               </div>
-              <p className='mt-3 text-left'>
-                내용을 적어주세요. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent
-                donec est. Odio penatibus risus viverra tellus varius sit neque erat velit. Faucibus
-                commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
-                sed amet vitae sed turpis id.
+
+              <p className='mt-5 text-left text-xl font-[500]'>
+                - 찍었던 사진들이 순서대로 나오게 됩니다.
+                <br />
+                <br />
+                - 필 요없는 사진은 삭제할 수 있어요.
+                <br />
+                <br />
+                - 자유롭게 사진을 배치하고, 기록을 남겨보세요.
+                <br />
+                <br />
+                - 다이어리 꾸미기를 하듯이 다른 사진이나 스티커를 붙일 수도 있어요.
+                <br />
+                <br />- 마지막으로 Export하게 되면 PDF나 이미지 파일로 만들 수 있습니다.
               </p>
             </div>
           </div>
