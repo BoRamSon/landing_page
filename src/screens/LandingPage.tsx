@@ -92,7 +92,7 @@ const LandingPage: React.FC = () => {
             />
           </div>
 
-          <div className='lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-center 2xl:justify-end items-center'>
+          <div className='lg:row-span-1 lg:row-start-3 lg:col-span-1 lg:col-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8 flex justify-start xl:justify-center xl:justify-end items-center'>
             <div className='lg:pr-4'>
               <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
                 <div className='flex ml-10 justify-start items-center'>
@@ -105,7 +105,7 @@ const LandingPage: React.FC = () => {
                   </span>
                 </div>
                 <p className='mt-3 text-left text-2xl font-[500]'>
-                  앱 내에서 원하는대로 사진을 찍어보세요!
+                  앱 내에서 원하는대로 사진을 찍어보세요! <br />
                 </p>
                 <p className='mt-5 text-left'></p>
               </div>
