@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://boramson.github.io/urlog/",
+  "homepage": "https://www.urlog.kr/",
   "scripts": {
     "start": "vite",
     "dev": "vite",
