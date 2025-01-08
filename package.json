@@ -1,5 +1,5 @@
 {
-  "name": "landing_page",
+  "name": "urlog",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d build -c https://urlog.kr"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
