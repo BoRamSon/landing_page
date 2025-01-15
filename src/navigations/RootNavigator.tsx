@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga4'; // 1. GA 관련 import 추가
-import TagManager from 'react-gtm-module'; // 4. GTM 관련 import 추가
+// import TagManager from 'react-gtm-module'; // 4. GTM 관련 import 추가
 import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Header from '../components/Header.tsx';
 // import Sidebar from '../components/Sidebar.tsx';
@@ -36,12 +36,12 @@ const RootNavigator: React.FC = () => {
   }, []);
 
   // 5. GTM 초기화
-  useEffect(() => {
-    TagManager.initialize({
-      // gtmId: `${import.meta.env.VITE_GTM_ID}`,
-      gtmId: 'GTM-NTWJC77J',
-    });
-  }, []);
+  // useEffect(() => {
+  //   TagManager.initialize({
+  //     // gtmId: `${import.meta.env.VITE_GTM_ID}`,
+  //     gtmId: 'GTM-NTWJC77J',
+  //   });
+  // }, []);
 
   return (
     <Router>
