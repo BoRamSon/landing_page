@@ -39,11 +39,20 @@ const RootNavigator: React.FC = () => {
   }, []);
 
   // 5. GTM 초기화
+  // useEffect(() => {
+  //   TagManager.initialize({
+  //     // gtmId: `${import.meta.env.VITE_GTM_ID}`,
+  //     gtmId: 'GTM-NTWJC77J',
+  //   });
+  //   console.log('GTM Initialized'); // 디버깅용 로그
+  // }, []);
+
   useEffect(() => {
-    TagManager.initialize({
-      // gtmId: `${import.meta.env.VITE_GTM_ID}`,
-      gtmId: 'GTM-NTWJC77J',
-    });
+    // GTM 설정 (GTM 컨테이너 ID는 GTM에서 생성한 것)
+    const tagManagerArgs = {
+      gtmId: 'GTM-NTWJC77J', // GTM 컨테이너 ID로 교체하세요
+    };
+    TagManager.initialize(tagManagerArgs);
     console.log('GTM Initialized'); // 디버깅용 로그
   }, []);
 
