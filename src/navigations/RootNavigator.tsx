@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga4'; // 1. GA 관련 import 추가
-// import TagManager from 'react-gtm-module'; // 4. GTM 관련 import 추가
+import TagManager from 'react-gtm-module'; // 4. GTM 관련 import 추가
 import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Header from '../components/Header.tsx';
 // import Sidebar from '../components/Sidebar.tsx';
@@ -19,9 +19,11 @@ const TrackPageView = () => {
 
   useEffect(() => {
     // 해시 URL 변경 시 페이지뷰 전송
+    const fullPath = location.pathname + location.search + location.hash;
+    console.log('Sending pageview for:', fullPath); // 디버깅용 로그
     ReactGA.send({
       hitType: 'pageview',
-      page: location.pathname + location.search + location.hash,
+      page: fullPath,
     });
   }, [location]);
 
@@ -33,15 +35,17 @@ const RootNavigator: React.FC = () => {
   useEffect(() => {
     // ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`);
     ReactGA.initialize('G-PBBSSNTG9M');
+    console.log('GA4 Initialized'); // 디버깅용 로그
   }, []);
 
   // 5. GTM 초기화
-  // useEffect(() => {
-  //   TagManager.initialize({
-  //     // gtmId: `${import.meta.env.VITE_GTM_ID}`,
-  //     gtmId: 'GTM-NTWJC77J',
-  //   });
-  // }, []);
+  useEffect(() => {
+    TagManager.initialize({
+      // gtmId: `${import.meta.env.VITE_GTM_ID}`,
+      gtmId: 'GTM-NTWJC77J',
+    });
+    console.log('GTM Initialized'); // 디버깅용 로그
+  }, []);
 
   return (
     <Router>
