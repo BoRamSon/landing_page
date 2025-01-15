@@ -31,7 +31,7 @@ const TrackPageView = () => {
 const RootNavigator: React.FC = () => {
   // 2. GA 초기화
   useEffect(() => {
-    ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`);
+    ReactGA.initialize('G-PBBSSNTG9M');
   }, []);
 
   // 5. GTM 초기화
