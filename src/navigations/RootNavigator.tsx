@@ -31,19 +31,19 @@ const TrackPageView = () => {
 const RootNavigator: React.FC = () => {
   // 2. GA 초기화
   useEffect(() => {
-    ReactGA.initialize(`${process.env.GA_MEASUREMENT_ID}`);
+    ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`);
   }, []);
 
-  // 5. GTM 초기화
+  // 5. GTM 초기
   useEffect(() => {
     TagManager.initialize({
-      gtmId: `${process.env.GTM_ID}`,
+      gtmId: `${import.meta.env.VITE_GTM_ID}`,
     });
   }, []);
 
   return (
     <Router>
-      <TrackPageView /> {/* 3. 여기 최상단에 들어왔습니다. */}
+      <TrackPageView />
       <div className='MainBox'>
         <Header />
         {/* <Button /> */}
