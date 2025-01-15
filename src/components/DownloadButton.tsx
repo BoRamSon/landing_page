@@ -14,7 +14,7 @@ const DownloadButton: React.FC = () => {
       category: 'user_engagement', // GA4는 category 대신 주로 이벤트 이름을 사용
       action: 'download_click', // GA4에서는 action이 아닌 event_name으로 처리됨
       label: '다운로드 페이지로 이동', // GA4에서는 label 대신 event_label로 처리됨
-      value: 1, // GA4에서는 value 대신 event_value로 처리됨
+      // value: 1, // GA4에서는 value 대신 event_value로 처리됨
     });
 
     // 2. 기존 navigate 호출을 여기에서 한번에 처리하도록 만들었습니다.
