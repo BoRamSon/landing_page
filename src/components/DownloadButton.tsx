@@ -19,6 +19,8 @@ const DownloadButton: React.FC = () => {
 
     // 2. 기존 navigate 호출을 여기에서 한번에 처리하도록 만들었습니다.
     navigate('/notice');
+
+    console.log('클릭되어 다운로드 페이지로 이동하였습니다.');
   };
 
   return (
