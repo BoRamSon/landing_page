@@ -34,10 +34,10 @@ const RootNavigator: React.FC = () => {
     ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`);
   }, []);
 
-  // 5. GTM 초기
+  // 5. GTM 초기화
   useEffect(() => {
     TagManager.initialize({
-      gtmId: `${import.meta.env.VITE_GTM_ID}`,
+      gtmId: 'GTM-NTWJC77J',
     });
   }, []);
 
