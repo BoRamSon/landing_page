@@ -8,9 +8,9 @@ const DownloadButton: React.FC = () => {
   const navigate = useNavigate();
 
   // 1. 클릭 이벤트 핸들러
-  const handleCombinedClick = () => {
+  const handleCombinedClick = async () => {
     // Google Analytics 이벤트 전송
-    ReactGA.event({
+    await ReactGA.event({
       category: 'download',
       action: 'click',
       label: '다운로드 페이지로 이동',
@@ -18,7 +18,10 @@ const DownloadButton: React.FC = () => {
     });
 
     // 2. 기존 navigate 호출을 여기에서 한번에 처리하도록 만들었습니다.
-    navigate('/notice');
+    // 잠시 대기 후 페이지 이동
+    setTimeout(() => {
+      navigate('/notice');
+    }, 300); // 300ms 후에 페이지 이동
 
     console.log('클릭되어 다운로드 페이지로 이동하였습니다.');
   };
