@@ -1,6 +1,15 @@
 import React from 'react';
+import TagManager from 'react-gtm-module';
 
 const NoticePage: React.FC = () => {
+  TagManager.dataLayer({
+    dataLayer: {
+      event: 'download_click_From_NoticePage',
+      // page_path,
+      // page_title,
+    },
+  });
+
   return (
     <>
       <main className='grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8'>
