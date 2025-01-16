@@ -59,47 +59,44 @@ const RootNavigator: React.FC = () => {
   // ==========================================================================
 
   useEffect(() => {
-    // GA4 초기화 (해시 모드 활성화)
+    // GA 초기화
     ReactGA.initialize('G-PBBSSNTG9M', {
       gtagOptions: {
-        send_page_view: false, // 수동으로 페이지뷰를 전송하기 위해 자동 전송 비활성화
+        send_page_view: false, // 수동 페이지뷰 전송 설정
       },
     });
 
     // GTM 초기화
-    TagManager.initialize({
-      gtmId: 'GTM-NTWJC77J',
-    });
+    TagManager.initialize({ gtmId: 'GTM-NTWJC77J' });
 
-    // 해시 변경 이벤트 리스너
-    const handleLocationChange = () => {
-      const page_path = window.location.pathname + window.location.hash;
+    // 페이지뷰를 해시 라우팅에 맞게 전송
+    const sendPageView = () => {
+      const page_path = `${window.location.pathname}${window.location.hash}`;
       const page_title = document.title;
 
-      // GA4에 페이지뷰 전송
+      // GA에 페이지뷰 전송
       ReactGA.send({
         hitType: 'pageview',
         page: page_path,
         title: page_title,
       });
 
-      // GTM에 페이지뷰 전송
+      // GTM에 데이터 레이어 전송
       TagManager.dataLayer({
         dataLayer: {
           event: 'pageview',
-          page_path: page_path,
-          page_title: page_title,
-          hash_url: page_path, // 해시 포함 URL 전달
+          page_path,
+          page_title,
         },
       });
     };
 
-    // 초기 로드와 해시 변경시 이벤트 발생
-    handleLocationChange();
-    window.addEventListener('hashchange', handleLocationChange);
+    // 초기 로드 시 및 해시 변경 시 페이지뷰 전송
+    sendPageView();
+    window.addEventListener('hashchange', sendPageView);
 
     return () => {
-      window.removeEventListener('hashchange', handleLocationChange);
+      window.removeEventListener('hashchange', sendPageView);
     };
   }, []);
 
