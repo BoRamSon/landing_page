@@ -58,82 +58,74 @@
 
 // export default DownloadButton;
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactGA from 'react-ga4';
 import '../styles/component/DownloadButton.css';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ArrowDownCircleIcon } from '@heroicons/react/20/solid';
 
-// GTM DataLayer 이벤트 타입 정의
+// 데이터 계층의 타입 정의
 interface DataLayerEvent {
   event: string;
-  virtualPagePath: string;
-  virtualPageTitle: string;
+  platform: string;
+  url: string;
 }
 
-interface DataLayer extends Array<DataLayerEvent> {
-  push(event: DataLayerEvent): number;
-}
-
-// GTM Window 객체 타입 확장
+// window 객체에 dataLayer를 추가로 정의
 declare global {
   interface Window {
-    dataLayer: DataLayer;
+    dataLayer: DataLayerEvent[];
   }
 }
-
-// GTM에 가상 페이지뷰를 전송하는 함수
-const sendVirtualPageview = (path: string): void => {
-  if (window.dataLayer) {
-    const pageViewEvent: DataLayerEvent = {
-      event: 'virtualPageview',
-      virtualPagePath: path,
-      virtualPageTitle: document.title,
-    };
-    window.dataLayer.push(pageViewEvent);
-  }
-};
 
 const DownloadButton: React.FC = () => {
   const navigate = useNavigate();
-  const location = useLocation();
 
-  // 페이지 로드 시 현재 경로에 대한 가상 페이지뷰 전송
-  useEffect(() => {
-    const path = location.pathname + location.hash;
-    sendVirtualPageview(path);
-  }, [location]);
+  // 1. 클릭 이벤트 핸들러
+  const handleCombinedClick = (platform: 'android' | 'ios') => {
+    const urlWithHash = `${window.location.origin}/notice#${platform}`;
 
-  const handleCombinedClick = (): void => {
     // Google Analytics 이벤트 전송
     ReactGA.event({
       category: 'user_engagement',
       action: 'download_click',
-      label: '다운로드 페이지로 이동',
+      label: `다운로드 페이지로 이동 (${platform})`,
     });
 
-    // 페이지 이동 전에 GTM 가상 페이지뷰 이벤트 전송
-    const newPath = '/notice';
-    sendVirtualPageview(newPath);
+    // 2. GTM 데이터 계층에 이벤트 푸시
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'download_button_click',
+      platform, // 플랫폼 정보 (android, ios)
+      url: urlWithHash, // 해시태그가 포함된 URL
+    });
 
-    // 페이지 이동
+    // 3. 잠시 대기 후 페이지 이동
     setTimeout(() => {
-      navigate('/notice');
+      navigate(`/notice#${platform}`); // 해시태그 포함 URL로 이동
     }, 300);
 
-    console.log('클릭되어 다운로드 페이지로 이동하였습니다.');
+    console.log(`클릭되어 ${platform} 다운로드 페이지로 이동하였습니다.`);
   };
 
   return (
     <div className='buttons ml-5 mr-5'>
-      <button type='button' className='btn btn-android' onClick={handleCombinedClick}>
+      <button
+        type='button'
+        className='btn btn-android'
+        onClick={() => handleCombinedClick('android')} // Android 클릭 시 동작
+      >
         <ArrowDownCircleIcon className='store-icon' />
         <div className='btn-text'>
           <span className='btn-subtitle'>GET IT ON</span>
           <span className='btn-title'>Google Play</span>
         </div>
       </button>
-      <button type='button' className='btn btn-iOS' onClick={handleCombinedClick}>
+      <button
+        type='button'
+        className='btn btn-iOS'
+        onClick={() => handleCombinedClick('ios')} // iOS 클릭 시 동작
+      >
         <ArrowDownCircleIcon className='store-icon' />
         <div className='btn-text'>
           <span className='btn-subtitle'>Download on the</span>
