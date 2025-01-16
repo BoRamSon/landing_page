@@ -32,11 +32,11 @@ const TrackPageView = () => {
 
 const RootNavigator: React.FC = () => {
   // 2. GA 초기화
-  useEffect(() => {
-    // ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`);
-    ReactGA.initialize('G-PBBSSNTG9M');
-    console.log('GA4 Initialized'); // 디버깅용 로그
-  }, []);
+  // useEffect(() => {
+  //   // ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`);
+  //   ReactGA.initialize('G-PBBSSNTG9M');
+  //   console.log('GA4 Initialized'); // 디버깅용 로그
+  // }, []);
 
   // 5. GTM 초기화
   // useEffect(() => {
@@ -47,14 +47,65 @@ const RootNavigator: React.FC = () => {
   //   console.log('GTM Initialized'); // 디버깅용 로그
   // }, []);
 
+  // useEffect(() => {
+  //   // GTM 설정 (GTM 컨테이너 ID는 GTM에서 생성한 것)
+  //   const tagManagerArgs = {
+  //     gtmId: 'GTM-NTWJC77J', // GTM 컨테이너 ID로 교체하세요
+  //   };
+  //   TagManager.initialize(tagManagerArgs);
+  //   console.log('GTM Initialized'); // 디버깅용 로그
+  // }, []);
+
+  // ==========================================================================
+
   useEffect(() => {
-    // GTM 설정 (GTM 컨테이너 ID는 GTM에서 생성한 것)
-    const tagManagerArgs = {
-      gtmId: 'GTM-NTWJC77J', // GTM 컨테이너 ID로 교체하세요
+    // GA4 초기화 (해시 모드 활성화)
+    ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`, {
+      gtagOptions: {
+        send_page_view: false, // 수동으로 페이지뷰를 전송하기 위해 자동 전송 비활성화
+      },
+    });
+
+    // GTM 초기화
+    TagManager.initialize({
+      gtmId: `${import.meta.env.VITE_GTM_ID}`,
+      events: {
+        sendPageView: false, // 수동으로 페이지뷰를 전송하기 위해 자동 전송 비활성화
+      },
+    });
+
+    // 해시 변경 이벤트 리스너
+    const handleLocationChange = () => {
+      const page_path = window.location.pathname + window.location.hash;
+      const page_title = document.title;
+
+      // GA4에 페이지뷰 전송
+      ReactGA.send({
+        hitType: 'pageview',
+        page: page_path,
+        title: page_title,
+      });
+
+      // GTM에 페이지뷰 전송
+      TagManager.dataLayer({
+        dataLayer: {
+          event: 'pageview',
+          page_path: page_path,
+          page_title: page_title,
+        },
+      });
     };
-    TagManager.initialize(tagManagerArgs);
-    console.log('GTM Initialized'); // 디버깅용 로그
+
+    // 초기 로드와 해시 변경시 이벤트 발생
+    handleLocationChange();
+    window.addEventListener('hashchange', handleLocationChange);
+
+    return () => {
+      window.removeEventListener('hashchange', handleLocationChange);
+    };
   }, []);
+
+  // ===============================================================================
 
   return (
     <Router>

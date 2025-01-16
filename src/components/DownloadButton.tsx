@@ -68,13 +68,12 @@ import '../styles/component/DownloadButton.css';
 const DownloadButton: React.FC = () => {
   const navigate = useNavigate();
 
-  // 스토어 타입에 따른 클릭 이벤트 핸들러
   const handleCombinedClick = (storeType: 'Android' | 'iOS') => {
     // GA4 이벤트 전송
     ReactGA.event({
       category: 'user_engagement',
       action: 'download_click',
-      label: `${storeType} 다운로드 페이지로 이동`,
+      label: `${storeType} 다운로드`,
     });
 
     // GTM 이벤트 전송
@@ -82,14 +81,12 @@ const DownloadButton: React.FC = () => {
       dataLayer: {
         event: 'download_click',
         store_type: storeType,
-        page_path: `/notice#${storeType.toLowerCase()}`,
-        page_title: `${storeType} Download Page`,
       },
     });
 
-    // 해시태그가 포함된 URL로 이동
+    // 해시 라우팅으로 이동
     setTimeout(() => {
-      navigate(`/notice#${storeType.toLowerCase()}`);
+      navigate('/#/notice');
     }, 300);
 
     console.log(`클릭되어 ${storeType} 다운로드 페이지로 이동하였습니다.`);
