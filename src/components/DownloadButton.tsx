@@ -86,7 +86,7 @@ const DownloadButton: React.FC = () => {
 
     // 해시 라우팅으로 이동
     setTimeout(() => {
-      navigate('/#/notice');
+      navigate('/notice');
     }, 300);
 
     console.log(`클릭되어 ${storeType} 다운로드 페이지로 이동하였습니다.`);
