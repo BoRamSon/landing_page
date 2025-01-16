@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga4'; // 1. GA 관련 import 추가
 import TagManager from 'react-gtm-module'; // 4. GTM 관련 import 추가
-import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header.tsx';
 // import Sidebar from '../components/Sidebar.tsx';
 // import Button from '../components/ButtonBasic.tsx';
@@ -14,21 +14,21 @@ import Footer from '../components/Footer.tsx';
 import '../styles/navigation/RootNav.css';
 
 // 3. 페이지뷰 전송
-const TrackPageView = () => {
-  const location = useLocation();
+// const TrackPageView = () => {
+//   const location = useLocation();
 
-  useEffect(() => {
-    // 해시 URL 변경 시 페이지뷰 전송
-    const fullPath = location.pathname + location.search + location.hash;
-    console.log('Sending pageview for:', fullPath); // 디버깅용 로그
-    ReactGA.send({
-      hitType: 'pageview',
-      page: fullPath,
-    });
-  }, [location]);
+//   useEffect(() => {
+//     // 해시 URL 변경 시 페이지뷰 전송
+//     const fullPath = location.pathname + location.search + location.hash;
+//     console.log('Sending pageview for:', fullPath); // 디버깅용 로그
+//     ReactGA.send({
+//       hitType: 'pageview',
+//       page: fullPath,
+//     });
+//   }, [location]);
 
-  return null;
-};
+//   return null;
+// };
 
 const RootNavigator: React.FC = () => {
   // 2. GA 초기화
@@ -115,7 +115,7 @@ const RootNavigator: React.FC = () => {
         {/* <Sidebar /> */}
 
         <div className='MainNavigation'>
-          <TrackPageView />
+          {/* <TrackPageView /> */}
           <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/notice' element={<NoticePage />} />
