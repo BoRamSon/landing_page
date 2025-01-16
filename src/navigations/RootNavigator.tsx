@@ -60,7 +60,8 @@ const RootNavigator: React.FC = () => {
 
   useEffect(() => {
     // GA4 초기화 (해시 모드 활성화)
-    ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`, {
+    // ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`, {
+    ReactGA.initialize('G-PBBSSNTG9M', {
       gtagOptions: {
         send_page_view: false, // 수동으로 페이지뷰를 전송하기 위해 자동 전송 비활성화
       },
@@ -68,7 +69,7 @@ const RootNavigator: React.FC = () => {
 
     // GTM 초기화
     TagManager.initialize({
-      gtmId: `${import.meta.env.VITE_GTM_ID}`,
+      gtmId: 'GTM-NTWJC77J',
       events: {
         sendPageView: false, // 수동으로 페이지뷰를 전송하기 위해 자동 전송 비활성화
       },
