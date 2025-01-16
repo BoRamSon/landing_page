@@ -60,6 +60,7 @@
 
 import React from 'react';
 import ReactGA from 'react-ga4';
+import TagManager from 'react-gtm-module';
 import '../styles/component/DownloadButton.css';
 import { useNavigate } from 'react-router-dom';
 import { ArrowDownCircleIcon } from '@heroicons/react/20/solid';
@@ -82,50 +83,43 @@ const DownloadButton: React.FC = () => {
   const navigate = useNavigate();
 
   // 1. 클릭 이벤트 핸들러
-  const handleCombinedClick = (platform: 'android' | 'ios') => {
-    const urlWithHash = `${window.location.origin}/notice#${platform}`;
+  const handleCombinedClick = () => {
+    const hash_url = `${window.location.pathname}#/notice`; // 이동할 해시 URL
 
     // Google Analytics 이벤트 전송
     ReactGA.event({
-      category: 'user_engagement',
-      action: 'download_click',
-      label: `다운로드 페이지로 이동 (${platform})`,
+      category: 'user_engagement', // 이벤트 이름 (GA4에서는 카테고리 대신 이름 사용)
+      action: 'download_click', // 이벤트 액션 (GA4는 event_name)
+      label: '다운로드 페이지로 이동', // 설명 추가
     });
 
-    // 2. GTM 데이터 계층에 이벤트 푸시
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'download_button_click',
-      platform, // 플랫폼 정보 (android, ios)
-      url: urlWithHash, // 해시태그가 포함된 URL
+    // GTM에 데이터 레이어 전달
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'button_click',
+        page_path: hash_url,
+        event_label: '다운로드 버튼 클릭',
+      },
     });
 
-    // 3. 잠시 대기 후 페이지 이동
+    // 페이지 이동 (잠시 대기 후 이동)
     setTimeout(() => {
-      navigate(`/notice#${platform}`); // 해시태그 포함 URL로 이동
+      navigate('/notice');
     }, 300);
 
-    console.log(`클릭되어 ${platform} 다운로드 페이지로 이동하였습니다.`);
+    console.log('클릭되어 다운로드 페이지로 이동하였습니다.');
   };
 
   return (
     <div className='buttons ml-5 mr-5'>
-      <button
-        type='button'
-        className='btn btn-android'
-        onClick={() => handleCombinedClick('android')} // Android 클릭 시 동작
-      >
+      <button type='button' className='btn btn-android' onClick={handleCombinedClick}>
         <ArrowDownCircleIcon className='store-icon' />
         <div className='btn-text'>
           <span className='btn-subtitle'>GET IT ON</span>
           <span className='btn-title'>Google Play</span>
         </div>
       </button>
-      <button
-        type='button'
-        className='btn btn-iOS'
-        onClick={() => handleCombinedClick('ios')} // iOS 클릭 시 동작
-      >
+      <button type='button' className='btn btn-iOS' onClick={handleCombinedClick}>
         <ArrowDownCircleIcon className='store-icon' />
         <div className='btn-text'>
           <span className='btn-subtitle'>Download on the</span>
