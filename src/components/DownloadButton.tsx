@@ -58,24 +58,53 @@
 
 // export default DownloadButton;
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import '../styles/component/DownloadButton.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowDownCircleIcon } from '@heroicons/react/20/solid';
 
-// window에 dataLayer 속성을 추가
+// GTM DataLayer 이벤트 타입 정의
+interface DataLayerEvent {
+  event: string;
+  virtualPagePath: string;
+  virtualPageTitle: string;
+}
+
+interface DataLayer extends Array<DataLayerEvent> {
+  push(event: DataLayerEvent): number;
+}
+
+// GTM Window 객체 타입 확장
 declare global {
   interface Window {
-    dataLayer: { event: string; page: string }[];
+    dataLayer: DataLayer;
   }
 }
 
+// GTM에 가상 페이지뷰를 전송하는 함수
+const sendVirtualPageview = (path: string): void => {
+  if (window.dataLayer) {
+    const pageViewEvent: DataLayerEvent = {
+      event: 'virtualPageview',
+      virtualPagePath: path,
+      virtualPageTitle: document.title,
+    };
+    window.dataLayer.push(pageViewEvent);
+  }
+};
+
 const DownloadButton: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // 클릭 이벤트 핸들러
-  const handleCombinedClick = () => {
+  // 페이지 로드 시 현재 경로에 대한 가상 페이지뷰 전송
+  useEffect(() => {
+    const path = location.pathname + location.hash;
+    sendVirtualPageview(path);
+  }, [location]);
+
+  const handleCombinedClick = (): void => {
     // Google Analytics 이벤트 전송
     ReactGA.event({
       category: 'user_engagement',
@@ -83,21 +112,11 @@ const DownloadButton: React.FC = () => {
       label: '다운로드 페이지로 이동',
     });
 
-    // 해시를 쿼리 파라미터로 변환하여 GTM으로 전송
-    const currentPath = window.location.pathname;
-    const newPath = `${currentPath}?hash=${window.location.hash}`;
+    // 페이지 이동 전에 GTM 가상 페이지뷰 이벤트 전송
+    const newPath = '/notice';
+    sendVirtualPageview(newPath);
 
-    // GA4 전송
-    ReactGA.send({ hitType: 'pageview', page: newPath });
-
-    // GTM 데이터 레이어에 이벤트 푸시
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'pageview',
-      page: newPath,
-    });
-
-    // 잠시 대기 후 페이지 이동
+    // 페이지 이동
     setTimeout(() => {
       navigate('/notice');
     }, 300);
