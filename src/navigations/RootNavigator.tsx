@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga4'; // 1. GA 관련 import 추가
-import TagManager from 'react-gtm-module'; // 4. GTM 관련 import 추가
+import TagManager from 'react-gtm-module'; // 3. GTM 관련 import 추가
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header.tsx';
 // import Sidebar from '../components/Sidebar.tsx';
@@ -13,85 +13,41 @@ import NoticePage from '../screens/NoticePage.tsx';
 import Footer from '../components/Footer.tsx';
 import '../styles/navigation/RootNav.css';
 
-// 3. 페이지뷰 전송
-// const TrackPageView = () => {
-//   const location = useLocation();
-
-//   useEffect(() => {
-//     // 해시 URL 변경 시 페이지뷰 전송
-//     const fullPath = location.pathname + location.search + location.hash;
-//     console.log('Sending pageview for:', fullPath); // 디버깅용 로그
-//     ReactGA.send({
-//       hitType: 'pageview',
-//       page: fullPath,
-//     });
-//   }, [location]);
-
-//   return null;
-// };
-
 const RootNavigator: React.FC = () => {
-  // 2. GA 초기화
-  // useEffect(() => {
-  //   // ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`);
-  //   ReactGA.initialize('G-PBBSSNTG9M');
-  //   console.log('GA4 Initialized'); // 디버깅용 로그
-  // }, []);
-
-  // 5. GTM 초기화
-  // useEffect(() => {
-  //   TagManager.initialize({
-  //     // gtmId: `${import.meta.env.VITE_GTM_ID}`,
-  //     gtmId: 'GTM-NTWJC77J',
-  //   });
-  //   console.log('GTM Initialized'); // 디버깅용 로그
-  // }, []);
-
-  // useEffect(() => {
-  //   // GTM 설정 (GTM 컨테이너 ID는 GTM에서 생성한 것)
-  //   const tagManagerArgs = {
-  //     gtmId: 'GTM-NTWJC77J', // GTM 컨테이너 ID로 교체하세요
-  //   };
-  //   TagManager.initialize(tagManagerArgs);
-  //   console.log('GTM Initialized'); // 디버깅용 로그
-  // }, []);
-
-  // ==========================================================================
-
   useEffect(() => {
-    // GA 초기화
-    ReactGA.initialize('G-PBBSSNTG9M', {
+    // 2. GA 초기화
+    ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`, {
       gtagOptions: {
         send_page_view: false, // 수동 페이지뷰 전송 설정
       },
     });
 
-    // GTM 초기화
-    TagManager.initialize({ gtmId: 'GTM-NTWJC77J' });
+    // 4. GTM 초기화
+    TagManager.initialize({ gtmId: `${import.meta.env.VITE_GTM_ID}` });
 
-    // 페이지뷰를 해시 라우팅에 맞게 전송
+    // 5. 페이지뷰를 해시 라우팅에 맞게 전송
     const sendPageView = () => {
       const page_path = `${window.location.pathname}${window.location.hash}`;
       const page_title = document.title;
 
-      // GA에 페이지뷰 전송
+      // 5-1. GA에 페이지뷰 전송
       ReactGA.send({
-        hitType: 'pageview',
+        hitType: 'pageviewInCode',
         page: page_path,
         title: page_title,
       });
 
-      // GTM에 데이터 레이어 전송
+      // 5-2. GTM에 데이터 레이어 전송
       TagManager.dataLayer({
         dataLayer: {
-          event: 'pageview',
+          event: 'pageviewInCode',
           page_path,
           page_title,
         },
       });
     };
 
-    // 초기 로드 시 및 해시 변경 시 페이지뷰 전송
+    // 6. 초기 로드 시 및 해시 변경 시 페이지뷰 전송 (이거 여전히 안됩니다.)
     sendPageView();
     window.addEventListener('hashchange', sendPageView);
 
@@ -99,8 +55,6 @@ const RootNavigator: React.FC = () => {
       window.removeEventListener('hashchange', sendPageView);
     };
   }, []);
-
-  // ===============================================================================
 
   return (
     <Router>
@@ -110,7 +64,6 @@ const RootNavigator: React.FC = () => {
         {/* <Sidebar /> */}
 
         <div className='MainNavigation'>
-          {/* <TrackPageView /> */}
           <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/notice' element={<NoticePage />} />
