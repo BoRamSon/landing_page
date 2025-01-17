@@ -16,14 +16,14 @@ import '../styles/navigation/RootNav.css';
 const RootNavigator: React.FC = () => {
   useEffect(() => {
     // 2. GA 초기화
-    ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`, {
-      gtagOptions: {
-        send_page_view: false, // 수동 페이지뷰 전송 설정
-      },
-    });
+    // ReactGA.initialize(`${import.meta.env.VITE_GA_MEASUREMENT_ID}`, {
+    //   gtagOptions: {
+    //     send_page_view: false, // 수동 페이지뷰 전송 설정
+    //   },
+    // });
 
     // 4. GTM 초기화
-    TagManager.initialize({ gtmId: `${import.meta.env.VITE_GTM_ID}` });
+    // TagManager.initialize({ gtmId: `${import.meta.env.VITE_GTM_ID}` });
 
     // 5. 페이지뷰를 해시 라우팅에 맞게 전송
     const sendPageView = () => {

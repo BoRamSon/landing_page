@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactGA from 'react-ga4';
+// import ReactGA from 'react-ga4';
 import TagManager from 'react-gtm-module';
 import '../styles/component/DownloadButton.css';
 import { useNavigate } from 'react-router-dom';
@@ -12,11 +12,11 @@ const DownloadButton: React.FC = () => {
     const page_path = `${window.location.pathname}${window.location.hash}`;
 
     // GA event 전송
-    ReactGA.event({
-      category: 'user_engagementInCode',
-      action: 'download_click_to_GA',
-      label: platform,
-    });
+    // ReactGA.event({
+    //   category: 'user_engagementInCode',
+    //   action: 'download_click_to_GA',
+    //   label: platform,
+    // });
 
     // GTM Event of dataLayer 전송
     TagManager.dataLayer({
