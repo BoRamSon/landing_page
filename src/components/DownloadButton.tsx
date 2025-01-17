@@ -11,14 +11,12 @@ const DownloadButton: React.FC = () => {
   const handleDownloadClick = (platform: string) => {
     const page_path = `${window.location.pathname}${window.location.hash}`;
 
-    // GA event 전송
     // ReactGA.event({
     //   category: 'user_engagementInCode',
     //   action: 'download_click_to_GA',
     //   label: platform,
     // });
 
-    // GTM Event of dataLayer 전송
     TagManager.dataLayer({
       dataLayer: {
         event: 'download_click_to_GTM',

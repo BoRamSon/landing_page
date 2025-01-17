@@ -10,8 +10,8 @@ export default defineConfig({
     port: 3000,
   },
   define: {
-    'import.meta.env.VITE_GA_MEASUREMENT_ID': JSON.stringify('G-PBBSSNTG9M'),
+    // 'import.meta.env.VITE_GA_MEASUREMENT_ID': JSON.stringify(''),
     // 'import.meta.env.VITE_GA_STREAM_ID': JSON.stringify(''),
-    'import.meta.env.VITE_GTM_ID': JSON.stringify('GTM-NTWJC77J'),
+    // 'import.meta.env.VITE_GTM_ID': JSON.stringify(''),
   },
 });
