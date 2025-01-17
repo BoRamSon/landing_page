@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 
 const NoticePage: React.FC = () => {
-  TagManager.dataLayer({
-    dataLayer: {
-      event: 'succeed_enter_noticepage',
-      // page_path,
-      // page_title,
-    },
-  });
+  useEffect(() => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'succeed_on_noticepage',
+        // page_path,
+        // page_title,
+      },
+    });
+  }, []);
 
   return (
     <>
