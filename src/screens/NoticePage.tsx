@@ -4,7 +4,7 @@ import TagManager from 'react-gtm-module';
 const NoticePage: React.FC = () => {
   TagManager.dataLayer({
     dataLayer: {
-      event: 'download_click_From_NoticePage',
+      event: 'succeed_enter_noticepage',
       // page_path,
       // page_title,
     },
