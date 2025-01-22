@@ -8,7 +8,7 @@ import { ArrowDownCircleIcon } from '@heroicons/react/20/solid';
 const DownloadButton: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleDownloadClick = (platform: string) => {
+  const handleAndroidDownloadClick = () => {
     const page_path = `${window.location.pathname}${window.location.hash}`;
 
     // ReactGA.event({
@@ -19,8 +19,8 @@ const DownloadButton: React.FC = () => {
 
     TagManager.dataLayer({
       dataLayer: {
-        event: 'download_click_to_GTM',
-        platform,
+        event: 'user_click_android_download_button',
+        // platform,
         page_path,
       },
     });
@@ -29,12 +29,25 @@ const DownloadButton: React.FC = () => {
     navigate('/notice');
   };
 
+  const handleIosDownloadClick = () => {
+    const page_path = `${window.location.pathname}${window.location.hash}`;
+
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'user_click_iOS_download_button',
+        page_path,
+      },
+    });
+
+    navigate('/notice');
+  };
+
   return (
     <div className='buttons ml-5 mr-5'>
       <button
         type='button'
         className='btn btn-android'
-        onClick={() => handleDownloadClick('Google Play')}
+        onClick={() => handleAndroidDownloadClick()}
       >
         <ArrowDownCircleIcon className='store-icon' />
         <div className='btn-text'>
@@ -42,11 +55,7 @@ const DownloadButton: React.FC = () => {
           <span className='btn-title'>Google Play</span>
         </div>
       </button>
-      <button
-        type='button'
-        className='btn btn-iOS'
-        onClick={() => handleDownloadClick('App Store')}
-      >
+      <button type='button' className='btn btn-iOS' onClick={() => handleIosDownloadClick()}>
         <ArrowDownCircleIcon className='store-icon' />
         <div className='btn-text'>
           <span className='btn-subtitle'>Download on the</span>
