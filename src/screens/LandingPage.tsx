@@ -25,8 +25,6 @@ const LandingPage: React.FC = () => {
     TagManager.dataLayer({
       dataLayer: {
         event: 'user_on_mainpage',
-        // page_path,
-        // page_title,
       },
     });
   }, []);
