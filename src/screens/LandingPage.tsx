@@ -24,7 +24,7 @@ const LandingPage: React.FC = () => {
   useEffect(() => {
     TagManager.dataLayer({
       dataLayer: {
-        event: 'user_on_mainpage',
+        event: 'on_main_page',
       },
     });
   }, []);

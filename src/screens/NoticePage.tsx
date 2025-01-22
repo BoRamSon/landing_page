@@ -5,7 +5,7 @@ const NoticePage: React.FC = () => {
   useEffect(() => {
     TagManager.dataLayer({
       dataLayer: {
-        event: 'user_on_noticepage',
+        event: 'on_notice_page',
         // page_path,
         // page_title,
       },
@@ -15,7 +15,7 @@ const NoticePage: React.FC = () => {
   const handleBackToHomeClick = () => {
     TagManager.dataLayer({
       dataLayer: {
-        event: 'user_click_backToHome_button',
+        event: 'click_backToHome_button',
       },
     });
   };
@@ -23,7 +23,7 @@ const NoticePage: React.FC = () => {
   const handleFeedbackClick = () => {
     TagManager.dataLayer({
       dataLayer: {
-        event: 'user_click_feedback_button',
+        event: 'click_feedback_button',
       },
     });
   };

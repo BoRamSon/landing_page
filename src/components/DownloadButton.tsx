@@ -19,7 +19,7 @@ const DownloadButton: React.FC = () => {
 
     TagManager.dataLayer({
       dataLayer: {
-        event: 'user_click_android_download_button',
+        event: 'click_android_download_button',
         // platform,
         page_path,
       },
@@ -34,7 +34,7 @@ const DownloadButton: React.FC = () => {
 
     TagManager.dataLayer({
       dataLayer: {
-        event: 'user_click_iOS_download_button',
+        event: 'click_iOS_download_button',
         page_path,
       },
     });
