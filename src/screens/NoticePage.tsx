@@ -5,12 +5,28 @@ const NoticePage: React.FC = () => {
   useEffect(() => {
     TagManager.dataLayer({
       dataLayer: {
-        event: 'succeed_on_noticepage',
+        event: 'user_on_noticepage',
         // page_path,
         // page_title,
       },
     });
   }, []);
+
+  const handleBackToHomeClick = () => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'user_click_backToHome_button',
+      },
+    });
+  };
+
+  const handleFeedbackClick = () => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'user_click_feedback_button',
+      },
+    });
+  };
 
   return (
     <>
@@ -25,12 +41,14 @@ const NoticePage: React.FC = () => {
           </p>
           <div className='mt-10 flex items-center justify-center gap-x-6'>
             <a
+              onClick={() => handleBackToHomeClick()}
               href='#'
               className='rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
             >
               Go back home
             </a>
             <a
+              onClick={() => handleFeedbackClick()}
               href='https://forms.gle/qzE4bD2saf88fZyF8'
               className='text-sm font-semibold text-gray-900'
             >
