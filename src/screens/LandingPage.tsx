@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 import {
   PhotoIcon,
   BookOpenIcon,
@@ -19,6 +21,16 @@ import bestshot from '../assets/images/URLog_DigitalAlbum_BestShot.png';
 import DownloadButton from '../components/DownloadButton.tsx';
 
 const LandingPage: React.FC = () => {
+  useEffect(() => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'user_on_mainpage',
+        // page_path,
+        // page_title,
+      },
+    });
+  }, []);
+
   return (
     <>
       <div className='relative isolate overflow-hidden bg-white px-6 py-10 lg:overflow-visible lg:px-0 mt-16'>
