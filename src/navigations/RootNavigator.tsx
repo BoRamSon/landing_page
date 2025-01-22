@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 // import ReactGA from 'react-ga4'; // 1. GA 관련 import 추가
-import TagManager from 'react-gtm-module'; // 3. GTM 관련 import 추가
+// import TagManager from 'react-gtm-module'; // 3. GTM 관련 import 추가
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header.tsx';
 // import Sidebar from '../components/Sidebar.tsx';
@@ -14,24 +14,24 @@ import Footer from '../components/Footer.tsx';
 import '../styles/navigation/RootNav.css';
 
 const RootNavigator: React.FC = () => {
-  useEffect(() => {
-    const page_path = `${window.location.pathname}${window.location.hash}`;
-    const page_title = document.title;
+  // useEffect(() => {
+  //   const page_path = `${window.location.pathname}${window.location.hash}`;
+  //   const page_title = document.title;
 
-    // ReactGA.send({
-    //   hitType: 'pageviewInCode',
-    //   page: page_path,
-    //   title: page_title,
-    // });
+  //   // ReactGA.send({
+  //   //   hitType: 'pageviewInCode',
+  //   //   page: page_path,
+  //   //   title: page_title,
+  //   // });
 
-    TagManager.dataLayer({
-      dataLayer: {
-        event: 'home_page_view',
-        page_path,
-        page_title,
-      },
-    });
-  }, []);
+  //   TagManager.dataLayer({
+  //     dataLayer: {
+  //       event: 'home_page_view',
+  //       page_path,
+  //       page_title,
+  //     },
+  //   });
+  // }, []);
 
   return (
     <Router>
