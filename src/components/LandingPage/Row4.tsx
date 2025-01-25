@@ -52,7 +52,7 @@ const Row4: React.FC<{ bestshot: string; album: string }> = ({ bestshot, album }
 
         place-items-center
       
-        justify-center items-center'
+        justify-center 2xl:justify-end items-center'
       >
         <img
           alt='bestshot'
