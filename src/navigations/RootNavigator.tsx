@@ -1,6 +1,4 @@
 import React from 'react';
-// import ReactGA from 'react-ga4'; // 1. GA 관련 import 추가
-// import TagManager from 'react-gtm-module'; // 3. GTM 관련 import 추가
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from '../components/Header.tsx';
 // import Sidebar from '../components/Sidebar.tsx';
@@ -14,33 +12,14 @@ import Footer from '../components/Footer.tsx';
 import '../styles/navigation/RootNav.css';
 
 const RootNavigator: React.FC = () => {
-  // useEffect(() => {
-  //   const page_path = `${window.location.pathname}${window.location.hash}`;
-  //   const page_title = document.title;
-
-  //   // ReactGA.send({
-  //   //   hitType: 'pageviewInCode',
-  //   //   page: page_path,
-  //   //   title: page_title,
-  //   // });
-
-  //   TagManager.dataLayer({
-  //     dataLayer: {
-  //       event: 'home_page_view',
-  //       page_path,
-  //       page_title,
-  //     },
-  //   });
-  // }, []);
-
   return (
     <Router>
-      <div className='MainBox'>
+      <div className='MainBox flex flex-col min-h-screen'>
         <Header />
         {/* <Button /> */}
         {/* <Sidebar /> */}
 
-        <div className='MainNavigation'>
+        <div className='MainNavigation flex-grow'>
           <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/notice' element={<NoticePage />} />
