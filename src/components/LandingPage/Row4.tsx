@@ -34,7 +34,7 @@ const Row4: React.FC<{ bestshot: string; album: string }> = ({ bestshot, album }
             <p className='mt-5 text-left text-xl font-[500]'>
               - 이제 위치별, 날짜별, 인물별 빠르게 나눠보세요!
               <br />- 중복사진이 있다면 바로 삭제하실 수 있어요.
-              <br />- 한번에 여러장 찍힌 사진들을 자동으로 묶어주고 베스트샷을 선정하면 나머지
+              <br />- 한번에 여러장 찍힌 사진들을 자동으로 묶어주고 '베스트샷'을 선정하면 나머지
               사진을 한번에 삭제해줍니다.
             </p>
           </div>
