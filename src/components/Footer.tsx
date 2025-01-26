@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className=' mt-6 bottom-0 left-0 w-full bg-gray-700 text-white py-5 text-center'>
+    <footer className=' mt-0 bottom-0 left-0 w-full bg-gray-700 text-white py-5 text-center'>
       <div className='max-w-7xl mx-auto flex flex-col items-center gap-2'>
         <img src='URLogLOGO.svg' alt='logo' className='w-28' />
         <p>&copy; 2025 URLog Website. All rights reserved.</p>

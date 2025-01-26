@@ -35,7 +35,7 @@ const DownloadButton: React.FC = () => {
   };
 
   return (
-    <div className='flex flex-wrap justify-center gap-4 bg-white'>
+    <div className='p-6 flex flex-wrap justify-center gap-4 bg-white'>
       {/* flex: 플렉스 디스플레이, flex-wrap: 플렉스 아이템을 여러 줄로 감싸기, 
       
         justify-center: 중앙 정렬, 
