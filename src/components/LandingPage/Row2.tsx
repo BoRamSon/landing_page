@@ -48,7 +48,7 @@ const Row2: React.FC<{ camera: string }> = ({ camera }) => {
         <img
           alt='camera'
           src={camera}
-          className='w-[13rem] max-w-none rounded-xl sm:w-[15rem] md:w-[17rem] lg:w-[20rem] xl:w-[20rem]'
+          className='w-[17rem] max-w-none rounded-xl lg:w-[20rem] xl:w-[21rem]'
         />
       </div>
     </>

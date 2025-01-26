@@ -49,7 +49,7 @@ const Row5: React.FC<{ digitalalbum: string }> = ({ digitalalbum }) => {
         <img
           alt='DigitalAlbum'
           src={digitalalbum}
-          className='w-[12rem] max-w-none rounded-xl sm:w-[15rem] md:w-[17rem] lg:w-[22rem] xl:w-[27rem]'
+          className='w-[19rem] max-w-none rounded-xl  lg:w-[21rem] xl:w-[22rem]'
         />
       </div>
     </>

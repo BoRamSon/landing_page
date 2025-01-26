@@ -59,7 +59,7 @@ const Row1: React.FC<{ cover: string; telescope: string }> = ({ cover, telescope
         <img
           alt='cover'
           src={cover}
-          className='w-[13rem] max-w-none rounded-xl sm:w-[15rem] md:w-[17rem] lg:w-[20rem] xl:w-[20rem]'
+          className='w-[17rem] max-w-none rounded-xl lg:w-[20rem] xl:w-[21rem]'
         />
         {/* w-[13rem]: 너비 13rem, max-w-none: 최대 너비 없음, rounded-xl: 둥근 모서리 extra large, sm:w-[15rem]: 작은 화면에서 너비 15rem, md:w-[17rem]: 중간 화면에서 너비 17rem, lg:w-[20rem]: 큰 화면에서 너비 20rem, xl:w-[20rem]: 매우 큰 화면에서 너비 20rem */}
       </div>
@@ -87,7 +87,7 @@ const Row1: React.FC<{ cover: string; telescope: string }> = ({ cover, telescope
         <img
           alt=''
           src={telescope}
-          className='w-[5rem] max-w-none rounded-xl sm:w-[8rem] md:w-[10rem] lg:w-[13rem] xl:w-[15rem]'
+          className='w-[10rem] max-w-none rounded-xl lg:w-[13rem] xl:w-[15rem]'
         />
         {/* w-[5rem]: 너비 5rem, max-w-none: 최대 너비 없음, rounded-xl: 둥근 모서리 extra large, sm:w-[8rem]: 작은 화면에서 너비 8rem, md:w-[10rem]: 중간 화면에서 너비 10rem, lg:w-[13rem]: 큰 화면에서 너비 13rem, xl:w-[15rem]: 매우 큰 화면에서 너비 15rem */}
       </div>

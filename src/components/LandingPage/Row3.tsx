@@ -38,7 +38,7 @@ const Row3: React.FC<{ mainmap: string }> = ({ mainmap }) => {
         <img
           alt='mainmap'
           src={mainmap}
-          className='w-[13rem] max-w-none rounded-xl sm:w-[15rem] md:w-[17rem] lg:w-[20rem] xl:w-[20rem]'
+          className='w-[17rem] max-w-none rounded-xl lg:w-[20rem] xl:w-[21rem]'
         />
       </div>
     </>

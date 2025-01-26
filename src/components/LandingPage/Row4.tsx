@@ -48,32 +48,32 @@ const Row4: React.FC<{ bestshot: string; album: string }> = ({ bestshot, album }
       <div
         className='mt-0 p-6 lg:top-4 lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 
         
-        lg:overflow-hidden grid max-h-25 mb-200
+        lg:overflow-hidden grid max-h-25 mb-100
 
         place-items-center
       
-        justify-center 2xl:justify-end items-center'
+        flex - self-center justify-center items-center'
       >
-        <img
-          alt='bestshot'
-          src={bestshot}
-          className='w-[8rem] sm:w-[10rem] md:w-[13rem] lg:w-[17rem] xl:w-[21rem]'
-        />
+        <img alt='bestshot' src={bestshot} className='w-[20rem] lg:w-[21rem] xl:w-[24rem]' />
       </div>
 
       {/* ============================================================================= */}
 
       <div
-        className='mt-6 p-6 lg:sticky lg:top-4 lg:row-span-2 lg:row-start-7 lg:col-span-1 lg:col-start-2 
+        className='mt-6 p-6  lg:row-span-2 lg:row-start-7 lg:col-span-1 lg:col-start-2 
       
-      lg:overflow-hidden flex 
+        lg:sticky 
+        
+        top-0 lg:top-4
+
+        lg:overflow-hidden 
       
-      justify-center items-center'
+        flex justify-center items-center'
       >
         <img
           alt='album'
           src={album}
-          className='w-[13rem] max-w-none rounded-xl sm:w-[15rem] md:w-[17rem] lg:w-[20rem] xl:w-[20rem]'
+          className='w-[19rem] max-w-none rounded-xl lg:w-[20rem] xl:w-[21rem]'
         />
       </div>
     </>
