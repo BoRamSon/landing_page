@@ -68,8 +68,38 @@ const LandingPage: React.FC = () => {
 
         {/* ========================================================================================================== */}
 
-        <div className='mx-auto grid max-w-2xl grid-cols-1 grid-row-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:grid-row-40 lg:items-start lg:gap-y-10'>
-          {/* mx-auto: x축 마진 자동, grid: 그리드 디스플레이, max-w-2xl: 최대 너비 2xl, grid-cols-1: 1열, grid-row-1: 1행, gap-x-8: x축 간격 2rem, gap-y-16: y축 간격 4rem, lg:mx-0: 큰 화면에서 x축 마진 0, lg:max-w-none: 큰 화면에서 최대 너비 없음, lg:grid-cols-2: 큰 화면에서 2열, lg:grid-row-40: 큰 화면에서 40행, lg:items-start: 큰 화면에서 아이템 정렬 시작, lg:gap-y-10: 큰 화면에서 y축 간격 2.5rem */}
+        <div
+          className='pl-6 grid 
+          
+          max-w-xl
+          
+          grid-cols-1 grid-row-1 
+          
+          gap-x-8 gap-y-1 
+          
+          lg:mx-0
+          lg:max-w-none lg:grid-cols-2 lg:grid-row-40 
+          
+          lg:items-start 
+          
+          lg:gap-y-10'
+        >
+          {/* mx-auto: x축 마진 자동, 을 빼고, pl-6
+
+          grid: 그리드 디스플레이, 
+          max-w-2xl: 최대 너비 2xl, 
+          grid-cols-1: 1열, grid-row-1: 1행, 
+          
+          gap-x-8: x축 간격 2rem, gap-y-16: y축 간격 4rem, 
+          
+          lg:mx-0: 큰 화면에서 x축 마진 0, 
+          lg:max-w-none: 큰 화면에서 최대 너비 없음, 
+          lg:grid-cols-2: 큰 화면에서 2열, lg:grid-row-40: 큰 화면에서 40행, 
+          
+          lg:items-start: 큰 화면에서 아이템 정렬 시작, 
+          
+          lg:gap-y-10: 큰 화면에서 y축 간격 2.5rem */}
+
           <Row1 cover={cover} telescope={telescope} />
           <Row2 camera={camera} />
           <Row3 mainmap={mainmap} />
