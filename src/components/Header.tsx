@@ -1,5 +1,5 @@
 import urlogLogo from '../assets/images/URLog_Logo.png';
-import DownloadButton from './DownloadButton.tsx';
+import DownloadButton from './DownloadButtonForHeader.tsx';
 
 const Header = () => {
   return (
