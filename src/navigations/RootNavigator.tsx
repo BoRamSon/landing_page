@@ -9,17 +9,16 @@ import NoticePage from '../screens/NoticePage.tsx';
 // import HomePage from '../screens/HomePage.tsx';
 // import DetailPage from '../screens/DetailPage.tsx';
 import Footer from '../components/Footer.tsx';
-import '../styles/navigation/RootNav.css';
 
 const RootNavigator: React.FC = () => {
   return (
     <Router>
-      <div className='MainBox flex flex-col min-h-screen'>
+      <div className='flex flex-col min-h-screen'>
         <Header />
         {/* <Button /> */}
         {/* <Sidebar /> */}
 
-        <div className='MainNavigation flex-grow'>
+        <div className='flex-1 p-4'>
           <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/notice' element={<NoticePage />} />
