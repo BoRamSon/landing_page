@@ -13,7 +13,7 @@ const Row4: React.FC<{ bestshot: string; album: string }> = ({ bestshot, album }
       >
         <div className='lg:pr-4'>
           <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
-            <div className='flex ml-10 justify-start items-center'>
+            <div className='flex justify-start items-center'>
               <PhotoIcon aria-hidden='true' className='mt-16 size-8 flex-none text-indigo-600' />
               <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
                 3. 갤러리에서 사진 확인 및 정리
@@ -44,7 +44,7 @@ const Row4: React.FC<{ bestshot: string; album: string }> = ({ bestshot, album }
       {/* ============================================================================= */}
 
       <div
-        className='mt-0 p-6 lg:top-4 lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 
+        className='mt-6 lg:p-6 lg:top-4 lg:row-span-1 lg:row-start-8 lg:col-span-1 lg:col-start-1 
         
         lg:overflow-hidden grid max-h-25 mb-100
 
@@ -58,7 +58,7 @@ const Row4: React.FC<{ bestshot: string; album: string }> = ({ bestshot, album }
       {/* ============================================================================= */}
 
       <div
-        className='mt-6 p-6  lg:row-span-2 lg:row-start-7 lg:col-span-1 lg:col-start-2 
+        className='mt-5 p-0 lg:mt-6 lg:p-6 lg:row-span-2 lg:row-start-7 lg:col-span-1 lg:col-start-2 
       
         lg:sticky 
         
@@ -66,8 +66,9 @@ const Row4: React.FC<{ bestshot: string; album: string }> = ({ bestshot, album }
 
         lg:overflow-hidden 
       
-        flex justify-center items-center'
+        flex flex-col justify-center items-center'
       >
+        <span className='text-center text-[14px] font-bold'>Gallary</span>
         <img
           alt='album'
           src={album}

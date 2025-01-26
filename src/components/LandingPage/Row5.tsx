@@ -13,7 +13,7 @@ const Row5: React.FC<{ digitalalbum: string }> = ({ digitalalbum }) => {
       >
         <div className='lg:pr-4'>
           <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>
-            <div className='flex ml-10 justify-start items-center'>
+            <div className='flex justify-start items-center'>
               <BookOpenIcon aria-hidden='true' className='mt-16 size-8 flex-none text-indigo-600' />
               <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
                 4. 여행이 끝나면 '디지털 앨범!'
@@ -39,9 +39,9 @@ const Row5: React.FC<{ digitalalbum: string }> = ({ digitalalbum }) => {
         </div>
       </div>
 
-      {/*  */}
+      {/* =============================================================== */}
 
-      <div className='mt-6 p-6 lg:sticky lg:top-4 lg:row-span-2 lg:row-start-9 lg:col-span-1 lg:col-start-2 lg:overflow-hidden flex justify-center items-center'>
+      <div className='mt-0 mb-10 p-0 lg:mt-6 lg:p-6 lg:sticky lg:top-4 lg:row-span-2 lg:row-start-9 lg:col-span-1 lg:col-start-2 lg:overflow-hidden flex justify-center items-center'>
         <img
           alt='DigitalAlbum'
           src={digitalalbum}

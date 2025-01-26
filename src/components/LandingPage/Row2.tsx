@@ -17,6 +17,8 @@ const Row2: React.FC<{ camera: string }> = ({ camera }) => {
       
         justify-start lg:justify-center xl:justify-end items-center' */}
 
+        {/* ============================================================================== */}
+
         <div className='lg:pr-4'>
           {/* lg:pr-4: 큰 화면에서 오른쪽 패딩 1rem */}
 
@@ -24,7 +26,7 @@ const Row2: React.FC<{ camera: string }> = ({ camera }) => {
             {/* <div className='max-w-full text-base/7 text-gray-700 lg:max-w-lg'>*/}
             {/* lg:max-w-lg: 큰 화면에서 최대 너비 large */}
 
-            <div className='flex ml-10 justify-start items-center lg:flex-1'>
+            <div className='flex justify-start items-center lg:flex-1'>
               <CameraIcon aria-hidden='true' className='mt-16 size-8 flex-none text-indigo-600' />
               <span className='mt-16 ml-2 text-3xl text-left font-bold tracking-tight text-gray-1000'>
                 1. 앱 내 사진촬영
@@ -38,12 +40,14 @@ const Row2: React.FC<{ camera: string }> = ({ camera }) => {
         </div>
       </div>
 
+      {/* ============================================================================== */}
+
       <div
-        className='mt-6 p-6 lg:sticky lg:top-4 lg:row-span-2 lg:row-start-3 lg:col-span-1 lg:col-start-2 
+        className='mt-0 p-0 lg:mt-6 lg:p-6 lg:sticky lg:top-4 
+        
+        lg:row-span-2 lg:row-start-3 lg:col-span-1 lg:col-start-2 lg:overflow-hidden 
       
-      lg:overflow-hidden flex 
-      
-      justify-center items-center'
+        flex justify-center items-center'
       >
         <img
           alt='camera'
