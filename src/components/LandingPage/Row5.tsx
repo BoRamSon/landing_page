@@ -28,15 +28,11 @@ const Row5: React.FC<{ digitalalbum: string }> = ({ digitalalbum }) => {
             <p className='mt-5 text-left text-xl font-[500]'>
               - 찍었던 사진들이 순서대로 나오게 됩니다.
               <br />
-              <br />
               - 필 요없는 사진은 삭제할 수 있어요.
-              <br />
               <br />
               - 자유롭게 사진을 배치하고, 기록을 남겨보세요.
               <br />
-              <br />
               - 다이어리 꾸미기를 하듯이 다른 사진이나 스티커를 붙일 수도 있어요.
-              <br />
               <br />- 마지막으로 Export하게 되면 PDF나 이미지 파일로 만들 수 있습니다.
             </p>
           </div>

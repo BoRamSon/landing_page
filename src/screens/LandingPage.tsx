@@ -69,13 +69,13 @@ const LandingPage: React.FC = () => {
         {/* ========================================================================================================== */}
 
         <div
-          className='pl-6 grid 
+          className='mx-auto grid 
           
           max-w-xl
           
           grid-cols-1 grid-row-1 
           
-          gap-x-8 gap-y-1 
+          gap-x-8 gap-y-0
           
           lg:mx-0
           lg:max-w-none lg:grid-cols-2 lg:grid-row-40 
@@ -84,7 +84,7 @@ const LandingPage: React.FC = () => {
           
           lg:gap-y-10'
         >
-          {/* mx-auto: x축 마진 자동, 을 빼고, pl-6
+          {/* mx-auto: x축 마진 자동
 
           grid: 그리드 디스플레이, 
           max-w-2xl: 최대 너비 2xl, 
