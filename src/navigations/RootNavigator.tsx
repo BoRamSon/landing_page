@@ -18,7 +18,7 @@ const RootNavigator: React.FC = () => {
         {/* <Button /> */}
         {/* <Sidebar /> */}
 
-        <div className='flex-1 p-4 w-full'>
+        <div className='flex-1 w-full'>
           <Routes>
             <Route path='/' element={<LandingPage />} />
             <Route path='/notice' element={<NoticePage />} />
