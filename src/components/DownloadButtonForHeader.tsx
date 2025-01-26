@@ -42,7 +42,7 @@ const DownloadButton: React.FC = () => {
         
         transition-all duration-300 
         
-        w-[50px] w600px:w-[170px] h-[50px]
+        w-[100px] w600px:w-[170px] h-[50px]
         
         bg-black text-white hover:bg-gray-600 
         
@@ -66,9 +66,10 @@ const DownloadButton: React.FC = () => {
         <div className='flex flex-col items-start leading-tight'>
           {/* flex: 플렉스 디스플레이, flex-col: 세로 방향 정렬, items-start: 아이템 시작 정렬 */}
           <span className='text-[12px] hidden w600px:inline'>GET IT ON</span>
-          {/* text-[12px]: 글꼴 크기 10px, hidden sm:inline: 600px 이하에서 숨기기 */}
+          {/* text-[12px]: 글꼴 크기 12px, hidden sm:inline: 600px 이하에서 숨기기 */}
           <span className='text-[20px] font-bold hidden w600px:inline'>Google Play</span>
-          {/* text-[20px]: 글꼴 크기 18px, font-bold: 글꼴 두께 bold, hidden sm:inline: 600px 이하에서 숨기기 */}
+          {/* text-[20px]: 글꼴 크기 20px, font-bold: 글꼴 두께 bold, hidden sm:inline: 600px 이하에서 숨기기 */}
+          <span className='text-[14px] font-bold w600px:hidden inline'>Google Play</span>
         </div>
       </button>
 
@@ -82,7 +83,7 @@ const DownloadButton: React.FC = () => {
         
         transition-all duration-300 
         
-        w-[48px] w600px:w-[170px] h-[50px]
+        w-[100px] w600px:w-[170px] h-[50px]
         
         bg-black text-white hover:bg-gray-600 
         
@@ -108,9 +109,10 @@ const DownloadButton: React.FC = () => {
         <div className='flex flex-col items-start leading-tight'>
           {/* flex: 플렉스 디스플레이, flex-col: 세로 방향 정렬, items-start: 아이템 시작 정렬 */}
           <span className='text-[11px] hidden w600px:inline'>Download on the</span>
-          {/* text-[12px]: 글꼴 크기 10px, hidden sm:inline: 600px 이하에서 숨기기 */}
+          {/* text-[12px]: 글꼴 크기 11px, hidden sm:inline: 600px 이하에서 숨기기 */}
           <span className='text-[22px] font-bold hidden w600px:inline'>App Store</span>
-          {/* text-[20px]: 글꼴 크기 18px, font-bold: 글꼴 두께 bold, hidden sm:inline: 600px 이하에서 숨기기 */}
+          {/* text-[20px]: 글꼴 크기 22px, font-bold: 글꼴 두께 bold, hidden sm:inline: 600px 이하에서 숨기기 */}
+          <span className='text-[14px] font-bold w600px:hidden inline'>App Store</span>
         </div>
       </button>
     </div>
