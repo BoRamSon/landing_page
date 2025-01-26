@@ -36,9 +36,9 @@ const DownloadButton: React.FC = () => {
 
       <button
         type='button'
-        className='flex items-center p-2.5 border-none 
+        className='flex items-center justify-center p-2.5 border-none 
         
-        rounded-lg cursor-pointer 
+        rounded-[12px] cursor-pointer 
         
         transition-all duration-300 
         
@@ -76,7 +76,9 @@ const DownloadButton: React.FC = () => {
 
       <button
         type='button'
-        className='flex items-center p-2.5 border-none rounded-lg cursor-pointer 
+        className='flex items-center justify-center p-2.5 border-none 
+        
+        rounded-[12px] cursor-pointer 
         
         transition-all duration-300 
         
@@ -105,9 +107,9 @@ const DownloadButton: React.FC = () => {
         {/* w-8: 너비 2rem, h-8: 높이 2rem, mr-2: 오른쪽 마진 0.5rem */}
         <div className='flex flex-col items-start leading-tight'>
           {/* flex: 플렉스 디스플레이, flex-col: 세로 방향 정렬, items-start: 아이템 시작 정렬 */}
-          <span className='text-[12px] hidden w600px:inline'>Download on the</span>
+          <span className='text-[11px] hidden w600px:inline'>Download on the</span>
           {/* text-[12px]: 글꼴 크기 10px, hidden sm:inline: 600px 이하에서 숨기기 */}
-          <span className='text-[20px] font-bold hidden w600px:inline'>App Store</span>
+          <span className='text-[22px] font-bold hidden w600px:inline'>App Store</span>
           {/* text-[20px]: 글꼴 크기 18px, font-bold: 글꼴 두께 bold, hidden sm:inline: 600px 이하에서 숨기기 */}
         </div>
       </button>

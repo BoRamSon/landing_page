@@ -42,13 +42,13 @@ const DownloadButton: React.FC = () => {
 
       <button
         type='button'
-        className='flex items-center p-2.5 border-none 
+        className='flex items-center justify-center p-3 border-none 
         
-        rounded-lg cursor-pointer 
+        rounded-[14px] cursor-pointer 
         
         transition-all duration-300 
         
-        w-[170px] h-[50px]
+        w-[210px] h-[80px]
         
         bg-black text-white hover:bg-gray-600 
         
@@ -67,13 +67,13 @@ const DownloadButton: React.FC = () => {
         
         active:bg-green-700: 활성화 시 배경색 초록 700 */}
 
-        <img src={playstore} alt='Download Icon' className='h-7 mr-2' />
+        <img src={playstore} alt='Download Icon' className='h-11 mr-2' />
         {/* w-8: 너비 2rem, h-8: 높이 2rem, mr-2: 오른쪽 마진 0.5rem */}
         <div className='flex flex-col items-start leading-tight'>
           {/* flex: 플렉스 디스플레이, flex-col: 세로 방향 정렬, items-start: 아이템 시작 정렬 */}
-          <span className='text-[12px]'>GET IT ON</span>
+          <span className='text-[14px]'>GET IT ON</span>
           {/* text-[12px]: 글꼴 크기 10px */}
-          <span className='text-[20px] font-bold'>Google Play</span>
+          <span className='text-[24px] font-bold'>Google Play</span>
           {/* text-[20px]: 글꼴 크기 18px, font-bold: 글꼴 두께 bold */}
         </div>
       </button>
@@ -82,11 +82,13 @@ const DownloadButton: React.FC = () => {
 
       <button
         type='button'
-        className='flex items-center p-2.5 border-none rounded-lg cursor-pointer 
+        className='flex items-center justify-center p-3 border-none 
+        
+        rounded-[14px] cursor-pointer 
         
         transition-all duration-300 
         
-        w-[170px] h-[50px]
+        w-[210px] h-[80px]
         
         bg-black text-white hover:bg-gray-600 
         
@@ -107,13 +109,13 @@ const DownloadButton: React.FC = () => {
         
         active:bg-gray-900: 활성화 시 배경색 회색 900 */}
 
-        <img src={apple} alt='Download Icon' className='h-8 mr-2' />
+        <img src={apple} alt='Download Icon' className='h-12 mr-2' />
         {/* w-8: 너비 2rem, h-8: 높이 2rem, mr-2: 오른쪽 마진 0.5rem */}
         <div className='flex flex-col items-start leading-tight'>
           {/* flex: 플렉스 디스플레이, flex-col: 세로 방향 정렬, items-start: 아이템 시작 정렬 */}
-          <span className='text-[12px]'>Download on the</span>
+          <span className='text-[14px]'>Download on the</span>
           {/* text-[12px]: 글꼴 크기 10px */}
-          <span className='text-[20px] font-bold'>App Store</span>
+          <span className='text-[26px] font-bold'>App Store</span>
           {/* text-[20px]: 글꼴 크기 18px, font-bold: 글꼴 두께 bold */}
         </div>
       </button>
