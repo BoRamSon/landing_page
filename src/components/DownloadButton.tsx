@@ -35,10 +35,14 @@ const DownloadButton: React.FC = () => {
   };
 
   return (
-    <div className='flex flex-wrap justify-center gap-4 mx-5 bg-white'>
+    <div className='flex flex-wrap justify-center gap-4 bg-white'>
       {/* flex: 플렉스 디스플레이, flex-wrap: 플렉스 아이템을 여러 줄로 감싸기, 
-      justify-center: 중앙 정렬, 
-      gap-4: 간격 1rem, mx-5: x축 마진 1.25rem */}
+      
+        justify-center: 중앙 정렬, 
+        gap-4: 간격 1rem, 
+        mx-5: x축 마진 1.25rem 
+      
+      */}
 
       <button
         type='button'
