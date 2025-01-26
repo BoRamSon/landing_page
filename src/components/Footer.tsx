@@ -1,26 +1,18 @@
 import React from 'react';
-import '../styles/component/Footer.css';
-// import urlogLogo from '../assets/images/URLog_Logo.png';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='footer'>
-      <div className='footer-content'>
-        {/* <img alt='' src={urlogLogo} className='w-[120px]' /> */}
-        <img src='URLogLOGO.svg' alt='logo' className='w-[120px]' />
-        <p>&copy; 2024 URLog Website. All rights reserved.</p>
-        <div className='footer-links'>
-          {/* <a href='/privacy-policy'>Privacy Policy</a> */}
-          {/* <a href='/terms-of-service'>Terms of Service</a> */}
+    <footer className='mt-12 bg-gray-700 text-white py-5 text-center'>
+      <div className='max-w-7xl mx-auto flex flex-col items-center gap-2'>
+        <img src='URLogLOGO.svg' alt='logo' className='w-28' />
+        <p>&copy; 2025 URLog Website. All rights reserved.</p>
+        <div className='flex gap-4'>
+          {/* <a href='/privacy-policy' className='text-yellow-500 hover:text-white'>Privacy Policy</a> */}
+          {/* <a href='/terms-of-service' className='text-yellow-500 hover:text-white'>Terms of Service</a> */}
         </div>
-        <div className='social-icons'>
-          {/* <a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
-            Facebook
-          </a> */}
-          {/* <span>SNS :</span>
-          <a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
-            Instagram
-          </a> */}
+        <div className='flex gap-4'>
+          {/* <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' className='text-yellow-500 hover:text-white'>Facebook</a> */}
+          {/* <a href='https://instagram.com' target='_blank' rel='noopener noreferrer' className='text-yellow-500 hover:text-white'>Instagram</a> */}
         </div>
       </div>
     </footer>
