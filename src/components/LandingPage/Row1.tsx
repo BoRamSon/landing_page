@@ -38,8 +38,8 @@ const Row1: React.FC<{ cover: string; telescope: string }> = ({ cover, telescope
             <p className='mt-1 font-[500] text-2xl text-gray-700'>
               {/* mt-1: 위쪽 마진 0.25rem, font-[500]: 글꼴 두께 500, text-2xl: 글꼴 크기 2xl, text-gray-700: 글꼴 색상 회색 700 */}
               안녕하세요! <br />
-              'URLog'는 여행 중 찍은 사진을 경로와 함께 지도에서 보여주고 다량으로 찍은 사진을
-              빠르게 정리하여 디지털 앨범으로 출력할 수 있는 앱서비스입니다.
+              'URLog'는 여행에서 많이 찍은 사진들을 지도에서 확인하고, AI로 섬세하게 분류 및
+              정리하여 디지털 앨범으로 제작 가능한 여행 필수 앱 서비스입니다.
             </p>
           </div>
         </div>
